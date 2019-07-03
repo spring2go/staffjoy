@@ -1,0 +1,53 @@
+.feature {
+  
+  &__item {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  
+  &__text {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 140px 30px;
+    
+    &__wrap {
+      max-width: 400px;
+    }
+  }
+  
+  &__note {
+    color: #999;
+    font-size: 16px;
+  }
+    
+  &__image {
+    width: 50%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  @include breakpoint($max: 800px) {
+    &__item {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    &__text {
+      padding-top: 80px;
+      padding-bottom: 40px;
+      width: 100%;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    
+    &__image {
+      width: 100%;
+    }
+  }
+}

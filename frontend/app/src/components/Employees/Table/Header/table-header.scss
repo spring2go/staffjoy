@@ -1,0 +1,12 @@
+@import "../../../../../../resources/scss/colors";
+
+.staffjoy-table {
+  thead {
+    th {
+      font-weight: 600;
+      color: $medium-grey;
+      text-transform: uppercase;
+      vertical-align: middle;
+    }
+  }
+}

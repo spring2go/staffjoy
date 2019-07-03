@@ -1,0 +1,176 @@
+version: '3.7'
+
+services:
+  account-service:
+    build: ./account-svc
+    image: account-svc
+    environment:
+      - SPRING_PROFILES_ACTIVE
+      - SERVER_PORT
+      - SIGNING_SECRET
+      - SENTRY_DSN
+      - EMAIL_SERVICE_ENDPOINT
+      - COMPANY_SERVICE_ENDPOINT
+      - BOT_SERVICE_ENDPOINT
+      - INTERCOM_ACCESS_TOKEN
+      - DATASOURCE_URL=jdbc:mysql://host.docker.internal:3306/staffjoy_account?useUnicode=true&characterEncoding=utf-8
+      - DATASOURCE_USERNAME=root
+      - DATASOURCE_PASSWORD=root
+    depends_on:
+      - bot-service
+      - email-service
+    networks:
+      - internal_access
+      - external_access # db access
+
+  company-service:
+    build: ./company-svc
+    image: company-svc
+    environment:
+      - SPRING_PROFILES_ACTIVE
+      - SERVER_PORT
+      - SIGNING_SECRET
+      - SENTRY_DSN
+      - EMAIL_SERVICE_ENDPOINT
+      - ACCOUNT_SERVICE_ENDPOINT
+      - BOT_SERVICE_ENDPOINT
+      - DATASOURCE_URL=jdbc:mysql://host.docker.internal:3306/staffjoy_company?useUnicode=true&characterEncoding=utf-8
+      - DATASOURCE_USERNAME=root
+      - DATASOURCE_PASSWORD=root
+    depends_on:
+      - bot-service
+      - email-service
+    networks:
+      - internal_access
+      - external_access # db access
+
+  bot-service:
+    build: ./bot-svc
+    image: bot-svc
+    environment:
+      - SPRING_PROFILES_ACTIVE
+      - SERVER_PORT
+      - SENTRY_DSN
+      - EMAIL_SERVICE_ENDPOINT
+      - ACCOUNT_SERVICE_ENDPOINT
+      - COMPANY_SERVICE_ENDPOINT
+      - SMS_SERVICE_ENDPOINT
+    depends_on:
+      - email-service
+  #      - sms-svc # commented for demo
+    networks:
+      - internal_access
+
+  email-service:
+    build: ./mail-svc
+    image: mail-svc
+    environment:
+      - SPRING_PROFILES_ACTIVE
+      - SERVER_PORT
+      - SENTRY_DSN
+      - ALIYUN_ACCESS_KEY
+      - ALIYUN_ACCESS_SECRET
+    networks:
+      - internal_access
+      - external_access # aliyun access
+
+# commented for demo
+#  sms-service:
+#    build: ./sms-svc
+#    image: sms-svc
+#    environment:
+#      - SPRING_PROFILES_ACTIVE=test
+
+  whoami-service:
+    build: ./whoami-svc
+    image: whoami-svc
+    environment:
+      - SPRING_PROFILES_ACTIVE
+      - SERVER_PORT
+      - SENTRY_DSN
+      - INTERCOM_APP_ID
+      - INTERCOM_SIGNING_SECRET
+      - ACCOUNT_SERVICE_ENDPOINT
+      - COMPANY_SERVICE_ENDPOINT
+    depends_on:
+      - account-service
+      - company-service
+    networks:
+      - internal_access
+
+# commented for demo
+#  ical-service:
+#    build: ./ical-svc
+#    image: ical-svc
+#    environment:
+#      - SPRING_PROFILES_ACTIVE=test
+#    depends_on:
+#      - company-service
+
+  www-service:
+    build: ./web-app
+    image: www-svc
+    ports:
+      - 81:80
+    environment:
+      - SPRING_PROFILES_ACTIVE
+      - SERVER_PORT
+      - SENTRY_DSN
+      - SIGNING_SECRET
+      - ACCOUNT_SERVICE_ENDPOINT
+      - COMPANY_SERVICE_ENDPOINT
+      - EMAIL_SERVICE_ENDPOINT
+      - RECAPTCHA_PUBLIC
+      - RECAPTCHA_PRIVATE
+    depends_on:
+      - account-service
+      - company-service
+      - email-service
+    networks:
+      - internal_access
+      - external_access
+
+  faraday-service:
+    build: ./faraday
+    image: faraday-svc
+    ports:
+      - 80:80
+    environment:
+      - SPRING_PROFILES_ACTIVE
+      - SERVER_PORT
+      - SENTRY_DSN
+      - SIGNING_SECRET
+    depends_on:
+      - account-service
+      - company-service
+      - www-service
+      - whoami-service
+#      - ical-service # commented for demo
+      - myaccount-service
+      - app-service
+    networks:
+      - internal_access
+      - external_access
+
+
+  myaccount-service:
+    build:
+      context: ./frontend
+      dockerfile: myaccount/Dockerfile
+    image: myaccount-spa
+    networks:
+      - internal_access
+
+  app-service:
+    build:
+      context: ./frontend
+      dockerfile: app/Dockerfile
+    image: app-spa
+    networks:
+      - internal_access
+
+networks:
+  internal_access:
+    internal: true
+  external_access:
+

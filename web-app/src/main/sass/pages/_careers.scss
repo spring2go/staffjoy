@@ -1,0 +1,121 @@
+#careers {
+  h2 {
+    text-align: center;
+  }
+
+  .thin-line-below:after {
+    content: ' ';
+    position: absolute;
+    left: 20%;
+    width: 60%;
+    height: 1px;
+    background: rgba(192, 192, 191, 0.3);
+  }
+
+
+  .banner {
+    background: #48b7ab;
+    text-align: center;
+    color: #fff;
+    padding: 40px 0 65px;
+    margin-bottom: 40px;
+
+    h1 {
+      margin-bottom: 20px;
+    }
+  }
+
+  .workplace {
+    padding: 0 5%;
+    text-align: center;
+
+    .gallery {
+      margin-bottom: 40px;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .benefits {
+    padding: 0% 5%;
+    margin-top: 90px;
+    margin-bottom: 40px;
+
+    .benefit {
+      width: 95%;
+
+      i {
+        color: #48b7ab;
+        margin-right: 10px;
+
+        &.less-margin {
+          margin-right: 5px;
+        }
+        &.more-margin {
+          margin-right: 15px;
+        }
+      }
+
+      p{
+        margin-left: 35px;
+      }
+    }
+  }
+
+  .positions {
+    margin-bottom: 35px;
+
+    .email-us {
+      text-align: center;
+      a {
+        color: #48b7ab;
+      }
+    }
+
+    .position {
+      width: 100%;
+      margin-bottom: 40px;
+
+      .card-title {
+        background: #48b7ab;
+        padding: 16px 16px;
+        color: #fff;
+
+        .position-title {
+          margin-bottom: 10px;
+        }
+        .location {
+          display: block;
+          margin: 0;
+        }
+      }
+
+      .text-section {
+        margin-bottom: 5px;
+        h4 {
+          margin-bottom: 10px;
+        }
+
+        ul {
+          list-style: disc;
+          margin-left: 20px;
+
+          &.child {
+            list-style: circle;
+          }
+        }
+      }
+
+      .mdl-card__actions {
+        padding-left: 3%;
+        button {
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

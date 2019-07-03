@@ -1,0 +1,17 @@
+.loading-container {
+    text-align: center;
+    margin-top: 150px;
+    opacity: 0.9;
+  
+    .mdl-spinner {
+      width: 40px !important;
+      height: 40px !important;
+      vertical-align: bottom;
+    }
+  
+    img {
+      margin-right: 20px;
+      height: 40px;
+    }
+  }
+  

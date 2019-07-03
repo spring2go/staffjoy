@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:with="http://www.thymeleaf.org/extras/with"
+      layout:decorate="~{layout}"
+      with:includeScripts="true"
+>
+<th:block layout:fragment="content">
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-phone">
+        </div>
+        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone mdl-cell--1-offset-tablet">
+            <div class="main-area">
+                <img src="/assets/images/staffjoy-logos/logo-white.svg" alt="Staffjoy Logo">
+                <h1>Tell us about your team</h1>
+
+                <form class="sign-up-form" id="v2-new-company-form" name="v2-new-company-form" th:action="@{/new_company}" th:method="post">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label sign-up-area">
+                        <input class="mdl-textfield__input" name="name" type="text" id="sign-up-form-main" autofocus>
+                        <label class="mdl-textfield__label" for="sign-up-form-main">Company Name</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label sign-up-area">
+                        <input class="mdl-textfield__input" name="team" type="text">
+                        <label class="mdl-textfield__label" for="sign-up-form-main">Company Location</label>
+                    </div>
+                    <input type="hidden" name="timezone" id="tz-val" value="">
+                    <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent sign-up-submit" name="go" value="Start Scheduling" id="v2-new-company-submit" />
+                </form>
+            </div>
+        </div>
+    </div>
+</th:block>
+</html>

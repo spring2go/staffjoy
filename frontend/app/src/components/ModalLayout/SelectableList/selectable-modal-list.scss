@@ -1,0 +1,11 @@
+@import "../../../../../resources/scss/colors";
+
+.modal-selectable-list {
+  margin-left: 28px;
+
+  .error-message {
+    color: $pure-white;
+    font-size: 12px;
+    padding-bottom: 8px;
+  }
+}

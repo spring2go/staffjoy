@@ -1,0 +1,27 @@
+# application.yml
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: account-service
+  datasource:
+    url: ${DATASOURCE_URL}
+    username: ${DATASOURCE_USERNAME}
+    password: ${DATASOURCE_PASSWORD}
+    tomcat:
+      test-while-idle: true
+      validation-query: SELECT 1
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+staffjoy:
+  common:
+    sentry-dsn: ${SENTRY_DSN}
+    deploy-env: ${DEPLOY:V2}
+  signing-secret: ${SIGNING_SECRET}
+  email-service-endpoint: ${EMAIL_SERVICE_ENDPOINT:http://email-service:8080}
+  company-service-endpoint: ${COMPANY_SERVICE_ENDPOINT:http://company-service:8080}
+  bot-service-endpoint: ${BOT_SERVICE_ENDPOINT:http://bot-service:8080}
+  intercom-access-token: ${INTERCOM_ACCESS_TOKEN}

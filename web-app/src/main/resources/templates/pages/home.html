@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:with="http://www.thymeleaf.org/extras/with"
+      layout:decorate="~{layout}"
+      with:includeNavigation="true"
+      with:includeFooter="true"
+      with:includeScripts="true"
+>
+<th:block layout:fragment="content">
+    <div class="lead">
+        <div class="lead__text">
+            <h1 class="align--center" id="typed">Share schedules in less time</h1>
+            <noscript>Share schedules in less time</noscript>
+            <div class="lead__note">Create a schedule online. We notify your team using text messages.</div>
+
+            <form class="sign-up-form lead__entry" id="v2-signup-form-top" name="v2-signup-form-top" th:action="@{/confirm}" th:method="post">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label sign-up-area">
+                    <input class="mdl-textfield__input" name="email" type="text" id="sign-up-form-top">
+                    <label class="mdl-textfield__label" for="sign-up-form-top">Email</label>
+                </div>
+                <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent sign-up-submit" name="subscribe" value="Sign Up For Free" id="v2-signup-top" />
+            </form>
+        </div>
+    </div>
+
+    <ul class="feature max-contained">
+
+        <li class="feature__item feature--schedule">
+            <div class="feature__text">
+                <div class="feature__text__wrap">
+                    <h2>How it works</h2>
+                    <div class="feature__note">Our scheduling software saves businesses time. Add workers with their name and cell phone number. Drag and drop to make the perfect schedule, then click to publish!</div>
+                </div>
+            </div>
+            <div class="feature__image">
+                <div class="schedule__animation">
+                    <div class="schedule__bar schedule__bar--1"></div>
+                    <div class="schedule__bar schedule__bar--2"></div>
+                    <div class="schedule__bar schedule__bar--3"></div>
+                    <div class="schedule__bar schedule__bar--4"></div>
+                </div>
+            </div>
+        </li>
+
+        <li class="feature__item feature--message">
+            <div class="feature__image">
+                <div class="text-message">
+                    Hey Philip - Your manager just added you to 7 Bridges on Staffjoy to share your work schedules.
+                </div>
+                <div class="text-message text-message--reverse">
+                    Your 7 Bridges manager just published 2 new shifts that you are working:<br />
+                    Fri 12/9 9:00AM - 5:00PM <br />
+                    Sat 12/10 9:00AM - 5:00PM
+                </div>
+            </div>
+            <div class="feature__text">
+                <div class="feature__text__wrap">
+                    <h2>Communication first</h2>
+                    <div class="feature__note">Our scheduling service uses text messages to tell employees when they are working. If something comes up and a schedule change is needed, the affected employees get automatic schedule updates via text message.</div>
+                </div>
+            </div>
+        </li>
+
+        <li class="feature__item feature--broadcast">
+            <div class="feature__text">
+                <div class="feature__text__wrap">
+                    <h2>Simplify scheduling</h2>
+                    <div class="feature__note">Many businesses already use text messages to communicate, and text messages get opened quickly. We use texts to improve the communication process for businesses and their hourly employees.  </div>
+                </div>
+            </div>
+            <div class="feature__image">
+                <div class="broadcast__animation"></div>
+                <img src="/assets/images/homepage/broadcast.svg" alt="" height="280" width="280" class="broadcast__image__background">
+            </div>
+        </li>
+    </ul>
+
+    <div class="promo">
+        <div class="promo__wrap fence">
+            <h3 class="promo__text">See which plan is right for your team:</h3>
+            <div>
+                <a th:href="@{/pricing}" href="pricing.html" class="button button--outline">View Pricing &amp; Plans</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="usage">
+        <div class="fence">
+            <h2 class="text--center">Staffjoy works for all kinds of industries</h2>
+            <ul class="usage__list">
+                <li>Support teams</li>
+                <li>Delivery companies</li>
+                <li>Cafes</li>
+                <li>QSR</li>
+                <li>Restaurants</li>
+                <li>Warehouses</li>
+                <li>and many more &hellip;</li>
+            </ul>
+            <ul class="usage__logos">
+                <li class="usage__logos--bellhops"></li>
+                <li class="usage__logos--partnerhero"></li>
+                <li class="usage__logos--invisible-girlfriend"></li>
+            </ul>
+        </div>
+    </div>
+
+    <ul class="endorse max-contained">
+        <li class="endorse__item">
+            <div class="endorse__container">
+                <div class="endorse__img" style="background-image:url(/assets/images/homepage/amber.jpg)"></div>
+                <div class="endorse__text">
+                    <h4>Amber Stacey</h4>
+                    <div class="endorse__credit">
+                        Former Director of Customer Operations at Bellhops
+                    </div>
+                    <div class="endorse__quote">
+                        "Staffjoy’s commitment to excellence is shown through their intuitive design and ease of use platform."
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="endorse__item endorse__item--light">
+            <div class="endorse__container">
+                <div class="endorse__img" style="background-image:url(/assets/images/homepage/talieh.jpg)"></div>
+                <div class="endorse__text">
+                    <h4>Shervin Talieh</h4>
+                    <div class="endorse__credit">
+                        Founder and CEO, PartnerHero
+                    </div>
+                    <div class="endorse__quote">
+                        "Our experience with Staffjoy has been great so far, and I only see it getting better as we grow."
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <div class="footer-cta">
+        <div class="footer-cta__wrap fence">
+            <h2>
+                Set up your account now:
+            </h2>
+            <form class="sign-up-form" id="v2-signup-form-bottom" name="v2-signup-form-bottom" th:action="@{/confirm}" th:method="post">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label sign-up-area">
+                    <input class="mdl-textfield__input" name="email" type="text" id="sign-up-form-bottom">
+                    <label class="mdl-textfield__label" for="sign-up-form-bottom">Email</label>
+                </div>
+                <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent sign-up-submit" name="subscribe" value="Sign Up For Free" id="v2-signup-bottom" />
+            </form>
+        </div>
+    </div>
+</th:block>
+</html>

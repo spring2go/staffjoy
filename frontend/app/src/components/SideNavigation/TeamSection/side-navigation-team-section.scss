@@ -1,0 +1,29 @@
+@import "../../../../../resources/scss/colors";
+
+.team-group {
+  margin-bottom: 20px;
+  padding: 15px 0;
+
+  .team-title {
+    padding-left: 30px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .team-nav-link {
+    padding: 10px 0px 10px 45px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $medium-grey;
+
+    &.active {
+      background-color: rgba(0,0,0, 0.1);
+    }
+
+    &:hover {
+      background-color: rgba(0,0,0, 0.15);
+    }
+  }
+}

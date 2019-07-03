@@ -1,0 +1,31 @@
+@import "../../../../../../../../../resources/scss/colors";
+
+.shift-week-table {
+  .scheduling-table-photo-name {
+    width: 100%;
+    padding: 4px 4px 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+    .profile-icon {
+      width: 20px;
+      margin-right: 4px;
+      border-radius: 50%;
+    }
+
+    .name-label {
+      max-width: 85px;
+      display: inline-block;
+      vertical-align: middle;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 12px;
+      color: $staffjoy-palette-logo-grey;
+      letter-spacing: 0.5px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}

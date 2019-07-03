@@ -1,0 +1,22 @@
+@import "../../../../resources/scss/colors";
+
+.confirmation-modal > div {
+  padding: 20px 16px 8px 16px;
+}
+
+.confirmation-modal-title {
+  font-size: 20px;
+	font-weight: 300;
+	line-height: 0.9;
+	letter-spacing: -1px;
+	color: $staffjoy-palette-logo-grey;
+  margin-bottom: 20px;
+}
+
+.confirmation-modal-content {
+	font-size: 12px;
+	line-height: 2.0;
+	letter-spacing: normal;
+	color: $staffjoy-palette-logo-grey;
+  margin-bottom: 20px;
+}

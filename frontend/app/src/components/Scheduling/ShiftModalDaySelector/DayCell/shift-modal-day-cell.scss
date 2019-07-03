@@ -1,0 +1,32 @@
+@import "../../../../../../resources/scss/colors";
+
+.shift-modal-day-cell {
+  display: inline-block;
+
+  .shift-modal-day-cell-button {
+    margin: 0 6px;
+    width: 32px;
+    height: 28px;
+    background-color: $pure-white;
+    border: 1px solid $staffjoy-palette-white;
+    color: $staffjoy-palette-logo-grey;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+
+    &:hover, &:active, &.selected {
+      background-color: $staffjoy-status-neutral-standard;
+      border-color: $staffjoy-status-neutral-standard;
+      color: $pure-white;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .display-date {
+    font-size: 9px;
+    color: $dark-grey;
+  }
+}

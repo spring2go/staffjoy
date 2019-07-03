@@ -1,0 +1,18 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "max-len": [1, 80, 2, {"ignoreComments": true}],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/forbid-prop-types": "off",
+    "import/prefer-default-export": "off"
+  },
+  "globals": {
+    "document": true,
+    "window": true,
+    "fetch": true
+  }
+}

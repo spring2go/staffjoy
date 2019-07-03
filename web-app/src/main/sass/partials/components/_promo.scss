@@ -1,0 +1,38 @@
+.promo {
+  background: #65459A;
+  padding: 30px 0;
+  
+  &__text {
+    color: #fff;
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  &__wrap {
+    display: flex;
+  }
+  
+  .button {
+    background: #65459A;
+  }
+  
+  @include breakpoint($max: 800px) {
+    margin-top: 50px;
+    text-align: center;
+    
+    &__text {
+      flex: none;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+    
+    .button {
+      margin: 0 auto;
+      display: inline-block;
+    }
+    
+    &__wrap {
+      display: block;
+    }
+  }
+}

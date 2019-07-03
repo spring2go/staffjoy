@@ -1,0 +1,83 @@
+.feature--schedule {
+      
+  .feature__image {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: url(../images/homepage/browser.svg) no-repeat left top 50px;
+    background-size: auto 120%;
+
+    @include breakpoint($max: 800px) {
+      height: 250px;
+      background-position: top center;
+      background-size: auto 120%;
+    }
+  }
+  
+  .schedule {
+    
+    &__animation {
+      width: 536px;
+      margin-top: 50px;
+
+      @include breakpoint($max: 800px) {
+        margin-top: 36px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 406px;
+      }
+    }
+    
+    &__bar {
+      background: #48b7ab;
+      height: 20px;
+      border-radius: 4px;
+      position: relative;
+      margin-bottom: 20px;
+      opacity: 0;
+      width: 20%;
+    }
+    
+    &__bar--1 {
+      left: 7%;
+      @include breakpoint($max: 800px) {
+        left: 10%;  
+      }
+    }
+    &__bar--2 {
+      left: 13%;
+    }
+    &__bar--3 {
+      left: 20%;
+    }
+    &__bar--4 {
+      left: 26%;
+    }
+  }
+  
+  &.is-active {
+    
+    .schedule__bar {
+      width: 50%;
+      opacity: 1;
+      transition: opacity 1000ms, width 2000ms;
+    }
+    .schedule__bar--1 {
+      width: 50%;
+      transition-delay: 500ms;
+    }
+    .schedule__bar--2 {
+      width: 60%;
+      transition-delay: 1000ms;
+    }
+    .schedule__bar--3 {
+      width: 70%;
+      transition-delay: 1500ms;
+    }
+    .schedule__bar--4 {
+      width: 45%;
+      transition-delay: 2000ms;
+    }
+    
+  }
+}

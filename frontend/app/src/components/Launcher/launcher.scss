@@ -1,0 +1,14 @@
+.company-launcher {
+    margin: 50px auto 0;
+    text-align: center;
+    max-width: 300px;
+  
+    .company {
+      color: black;
+  
+      &:hover {
+        color: #aaa;
+      }
+    }
+  }
+  

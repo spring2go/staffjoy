@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:with="http://www.thymeleaf.org/extras/with"
+      layout:decorate="~{layout}"
+      with:includeScripts="true"
+>
+<th:block layout:fragment="content">
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-phone">
+        </div>
+        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone mdl-cell--1-offset-tablet">
+            <div class="main-area">
+                <img src="/assets/images/staffjoy-logos/logo-white.svg" alt="Staffjoy Logo">
+                <h1 th:text="${page.title}"></h1>
+                <a th:href="@{/}" href="/" class="mdl-button mdl-button--raised mdl-button--accent">Return to home page</a>
+            </div>
+        </div>
+    </div>
+</th:block>
+</html>

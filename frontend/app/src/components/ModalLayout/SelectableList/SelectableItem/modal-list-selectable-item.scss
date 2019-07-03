@@ -1,0 +1,21 @@
+@import "../../../../../../resources/scss/colors";
+
+.modal-list-selectable-item {
+  margin-bottom: 12px;
+
+  .modal-checkbox {
+    margin-right: 8px;
+    cursor: pointer;
+    width: 14px;
+    height: 14px;
+  }
+
+  .name-label {
+    text-transform: uppercase;
+    color: $pure-white;
+    line-height: 1.2;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    cursor: pointer;
+  }
+}

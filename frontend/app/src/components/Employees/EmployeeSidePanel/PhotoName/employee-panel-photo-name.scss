@@ -1,0 +1,17 @@
+@import "../../../../../../resources/scss/colors";
+
+.employee-panel-photo-name {
+  margin-bottom: 30px;
+  .profile-icon {
+    width: 48px;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+
+  .employee-name {
+    color: $staffjoy-palette-logo-grey;
+    font-size: 16px;
+    display: inline-block;
+    margin: 0;
+  }
+}

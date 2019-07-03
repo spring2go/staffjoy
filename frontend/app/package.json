@@ -1,0 +1,90 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "front end app for my accounts",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --progress --colors --hot --config ./webpack.config.js --port 9001 --host 0.0.0.0",
+    "build": "webpack --progress --colors --config ./webpack.config.js",
+    "test": "mocha --compilers js:babel-core/register --require ./test/setup.js 'src/**/*spec.js'",
+    "test:watch": "npm run test -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spring2go/staffjoy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      "es2015",
+      "react",
+      "stage-2"
+    ],
+    "plugins": [
+      "react-hot-loader/babel"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/spring2go/staffjoy/issues"
+  },
+  "homepage": "https://github.com/spring2go/staffjoy#readme",
+  "devDependencies": {
+    "babel-core": "^6.11.4",
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-2": "^6.11.0",
+    "chai": "^3.5.0",
+    "css-loader": "^0.23.1",
+    "enzyme": "^2.4.1",
+    "eslint": "^3.1.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-loader": "^1.5.0",
+    "eslint-plugin-import": "^1.12.0",
+    "eslint-plugin-jsx-a11y": "^2.0.1",
+    "eslint-plugin-react": "^6.0.0",
+    "favicons-webpack-plugin": "0.0.7",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.22.0",
+    "jsdom": "^9.4.1",
+    "json-loader": "^0.5.4",
+    "mocha": "^2.5.3",
+    "node-sass": "^4.12.0",
+    "react-addons-test-utils": "^15.2.1",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1",
+    "webpack-cleanup-plugin": "^0.4.1",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "boron": "^0.2.3",
+    "classnames": "^2.2.5",
+    "eslint-import-resolver-webpack": "^0.8.1",
+    "lodash": "^4.14.1",
+    "moment": "^2.16.0",
+    "moment-timezone": "^0.5.9",
+    "normalizr": "^2.2.1",
+    "npm-zepto": "^1.1.7",
+    "raven-js": "^3.7.0",
+    "react": "^15.2.1",
+    "react-color": "2.11.1",
+    "react-dnd": "^2.1.4",
+    "react-dnd-html5-backend": "^2.1.2",
+    "react-dom": "^15.2.1",
+    "react-mdl": "^1.7.2",
+    "react-moment-proptypes": "^1.2.0",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.7.0",
+    "react-router-redux": "^4.0.5",
+    "redux": "^3.5.2",
+    "redux-form": "^6.1.1",
+    "redux-logger": "^2.6.1",
+    "redux-thunk": "^2.1.0",
+    "whatwg-fetch": "^1.0.0"
+  }
+}

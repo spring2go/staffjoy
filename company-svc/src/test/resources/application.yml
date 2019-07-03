@@ -1,0 +1,34 @@
+# ****** H2 In Memory Database Connection Info *******
+spring:
+  application:
+    name: company-service
+  datasource: # use in-memory db for unit testing
+    url: jdbc:h2:mem:staffjoy_company;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=MYSQL
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+    continue-on-error: false
+    platform: h2
+    schema: classpath:/db/schema.sql
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+staffjoy:
+  common:
+    sentry-dsn: ${SENTRY_DSN:https://8822f4ae889b433f9fe72e3904665246@sentry.io/1234888} # mock for test
+    deploy-env: ${DEPLOY:V2}
+  company-service-endpoint: http://localhost:8080 # for testing only
+  signing-secret: ${SIGNING_SECRET:TEST_SIGNING_SECRET}
+  email-service-endpoint: http://email-service
+  account-service-endpoint: http://account-servie
+  bot-service-endpoint: http://bot-service
+
+

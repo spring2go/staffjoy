@@ -1,0 +1,25 @@
+@import "../../../../../resources/scss/colors";
+
+.job-color-header {
+  text-align: center !important;
+}
+
+.table-row-new-job {
+  > td {
+    width: 100%;
+    background-color: $staffjoy-palette-white;
+    text-align: left !important;
+    font-size: 12px;
+    color: $staffjoy-status-neutral-standard;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  svg {
+    position: relative;
+    top: -1px;
+    margin-right: 6px;
+  }
+}

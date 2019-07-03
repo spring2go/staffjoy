@@ -1,0 +1,25 @@
+@import "../../../../../resources/scss/colors";
+
+.scheduling-date-controls-container {
+  &.mdl-grid {
+    padding: 0 !important;
+  }
+
+  .time-displays {
+    margin-left: 20px;
+    line-height: 14px;
+    padding-top: 2px;
+
+    .date-range {
+      color: $pure-white;
+      font-size: 16px;
+      margin-bottom: 1px;
+    }
+
+    .current-time {
+      font-size: 12px;
+      font-weight: 500;
+      color: $pure-white;
+    }
+  }
+}

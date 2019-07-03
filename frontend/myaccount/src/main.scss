@@ -1,0 +1,122 @@
+@import "../../third_party/node/material_design_lite/material-design-lite.scss";
+@import "../../resources/scss/staffjoy.scss";
+
+#myaccount {
+  padding-top: 50px;
+
+  .mdl-button {
+    min-width: 150px;
+  }
+
+  h1 {
+    margin-top: 0px;
+    margin-bottom: 38px;
+    font-size: 37px;
+    color: $medium-grey;
+    font-weight: 300;
+  }
+
+  h2 {
+    font-size: 28px;
+    font-weight: 300;
+    color: $medium-grey;
+    margin-top: 5px;
+    margin-bottom: 33px;
+  }
+
+  .profile-photo {
+    text-align: center;
+
+    img {
+      width: 200px;
+      height: 200px;
+    }
+
+    .change-photo-button {
+      margin: 30px auto 0;
+      width: 168px;
+      display: block;
+      color: $staffjoy-palette-primary;
+      font-weight: 600;
+      border: 1px solid $light-grey;
+      border-radius: 4px;
+    }
+  }
+
+  .button-nav {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin: 0 0 12px 23%;
+    }
+  }
+
+  .stats-panel {
+    max-width: 300px;
+    min-width: 250px;
+    margin: 30px auto 0;
+    width: 80%;
+
+    .info-stat {
+      margin-bottom: 8px;
+
+      span {
+        font-size: 12px;
+        color: $medium-grey;
+
+        &.label {
+          font-weight: 700;
+          margin-right: 12px;
+        }
+      }
+    }
+  }
+
+  .security {
+    margin-top: 70px;
+    margin-bottom: 40px;
+
+    .password-compare {
+      &.danger {
+        color: $staffjoy-status-error-standard;
+        font-size: 12px;
+        font-weight: 600;
+        margin-top: -15px;
+      }
+    }
+  }
+
+  .notifications {
+    padding-left: 40px;
+    margin-bottom: 20px;
+
+    @media (min-width: 840px) {
+      border-left: solid 2px #dfdfdf;
+      padding-bottom: 150px;
+    }
+  }
+
+  .inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .form-response {
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: -5px;
+
+    &.success {
+      color: $staffjoy-status-success-standard;
+    }
+
+    &.danger {
+      color: $staffjoy-status-error-standard;
+    }
+  }
+}

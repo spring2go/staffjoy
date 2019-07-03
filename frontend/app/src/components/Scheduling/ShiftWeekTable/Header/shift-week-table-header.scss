@@ -1,0 +1,27 @@
+@import "../../../../../../resources/scss/colors";
+
+.shift-week-table-header {
+  /*
+    this height pairs with the % value in .scrolling-panel
+    in the main table scss file
+  */
+  display: flex;
+  height: 5%;
+
+  min-height: 20px;
+  box-sizing: border-box;
+  margin-left: 15%;
+  margin-bottom: 10px;
+
+  .column-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: $dark-grey;
+  }
+}
+
+@media(max-width: 830px) {
+  .shift-week-table-header {
+    margin-left: 120px;
+  }
+}

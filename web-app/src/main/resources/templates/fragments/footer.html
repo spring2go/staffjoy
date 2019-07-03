@@ -1,0 +1,63 @@
+<div class="footer max-contained" xmlns:th="http://www.thymeleaf.org">
+    <ul class="footer__block">
+        <li class="footer__item footer__logo">
+            <img th:src="'/assets/images/staffjoy-logos/logo.svg?version='+${page.version}" alt="Staffjoy Logo" height="37" width="120">
+            <ul class="social">
+                <li class="social__item">
+                    <a href="https://twitter.com/staffjoy"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                </li>
+                <li class="social__item">
+                    <a href="https://github.com/staffjoy"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+                </li>
+                <li class="social__item">
+                    <a href="https://facebook.com/staffjoyapp"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                </li>
+                <li class="social__item">
+                    <a href="https://www.linkedin.com/company/6612912"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                </li>
+                <li class="social__item__instagram">
+                    <a href="https://www.instagram.com/staffjoy/" style="
+            color: white;
+            font-size: 20px;
+            margin-top: -8px;
+            line-height: 20px;
+            top: -3px;
+            position: relative;
+            opacity: 1;">
+                        <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+        </li>
+        <li class="footer__item">
+            <h5>Company</h5>
+            <ul>
+                <li><a th:href="@{/about}" href="about.html">About Us</a></li>
+                <li><a th:href="@{/careers}" href="careers.html">Careers</a></li>
+                <li><a href="https://blog.staffjoy.com/" target="_blank">Blog</a></li>
+                <li><a th:href="@{/privacy-policy}" href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a th:href="@{/terms}" href="terms.html">Terms &amp; Conditions</a></li>
+            </ul>
+        </li>
+        <li class="footer__item">
+            <h5>Help</h5>
+            <ul>
+                <li><a href="https://help.staffjoy.xyz/">Help Pages</a></li>
+                <li><a href="https://docs.staffjoy.xyz/">API Documentation</a></li>
+                <li><a href="https://status.staffjoy.xyz/">System Status Page</a></li>
+                <li><a href="mailto:help@staffjoy.xyz">help@staffjoy.com</a></li>
+            </ul>
+        </li>
+        <li class="footer__item">
+            <h5>Contact</h5>
+            <ul>
+                <li>
+                    Staffjoy, Inc.<br>
+                    1323 Columbus Ave., Floor 2<br>
+                    San Francisco, CA 94110<br>
+                    +1 443-578-3359<br>
+                    <a href="mailto:team@staffjoy.com">team@staffjoy.com</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

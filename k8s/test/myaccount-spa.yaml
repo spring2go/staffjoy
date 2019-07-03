@@ -1,0 +1,33 @@
+# https://matthewpalmer.net/kubernetes-app-developer/articles/kubernetes-apiversion-definition-guide.html
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: myaccount-spa-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: myaccount-svc
+        env: test
+    spec:
+      containers:
+        - name: myaccount-spa
+          image: myaccount-spa
+          imagePullPolicy: Never
+          ports:
+            - name: http-port
+              containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: myaccount-service
+spec:
+  selector:
+    app: myaccount-svc
+    env: test
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

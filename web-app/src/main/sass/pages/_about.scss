@@ -1,0 +1,83 @@
+.mission {
+  background: #48b7ab;
+  padding: 40px 10% 65px;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+  }
+
+  color: #fff;
+
+  h1 {
+    font-size: 37px;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    font-size: 21px;
+  }
+}
+
+.story {
+  text-align: center;
+  margin-top: 70px;
+
+  h2 {
+    margin-bottom: 30px;
+  }
+
+  p {
+    margin-bottom: 60px;
+    font-size: 16px;
+  }
+
+  &:after {
+    content: ' ';
+    position: absolute;
+    left: 20%;
+    width: 60%;
+    height: 1px;
+    background: rgba(192, 192, 191, 0.3);
+  }
+  
+  @media (min-width: 480px) {
+    padding: 0 15%;
+  }
+}
+
+.team {
+  margin-top: 130px;
+  margin-bottom: 100px;
+  padding: 0 5% 0;
+  text-align: center;
+
+  img {
+    border-radius: 50%;
+    height: 125px;
+    width: 125px;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    margin-bottom: 30px;
+  }
+
+  h3 {
+    font-size: 21px;
+    font-weight: 700;
+  }
+
+  h4 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 6px;
+  }
+
+  p{
+    padding: 0px 5px;
+    text-align: left;
+  }
+}

@@ -1,0 +1,169 @@
+.page-title {
+  background: #48b7ab;
+
+  .mdl-cell{
+    margin: 0;
+  }
+  .mdl-cell--12-col{
+    width: 100%;
+  }
+  h1, h2, h3 {
+    color: #fff;
+    padding-top: 3%;
+    padding-bottom: 14%;
+  }
+  h2{
+    font-size: 50px;
+  }
+  h3{
+    font-size: 40px;
+  }
+}
+
+.plans {
+  margin-top: -10%;
+  margin-bottom: 90px;
+
+  .plan {
+    ul {
+      padding: 0px 50px;
+      list-style-type: disc;
+      margin-bottom: 120px;
+
+      li {
+        padding-left: 15px;
+        color: #423a40;
+        font-size: 11pt;
+      }
+    }
+
+    .button-container {
+      width: 100%;
+      position: absolute;
+      bottom: 16px;
+      text-align: center;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+    .purple-house{
+      margin: auto;
+      margin-top: 0px;
+      margin-bottom: 30px;
+    }
+    .fill-width{
+      width: 100%;
+      &.disabled{
+        background-color: #91d4cd;
+        color: rgb(255,255,255);
+        &:hover{
+          cursor: not-allowed;
+        }
+      }
+      &.primary{
+        background-color: #48b7ab;
+      }
+    }
+  }
+
+  h2 {
+    margin-top: 32px;
+    margin-bottom: 19px;
+    font-size: 28pt;
+    color: #423a40;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  .enterprise-plan {
+    h2 {
+      margin-bottom: 9px;
+    }
+  }
+
+  img {
+    margin-bottom: 30px;
+  }
+
+  .price {
+    font-size: 24px;
+  	font-weight: bold;
+  	font-style: normal;
+  	font-stretch: normal;
+  	line-height: 1.0;
+  	letter-spacing: -1.4px;
+  	color: #423a3f;
+    text-align: center;
+  }
+
+  .price-format {
+    text-align: center;
+    font-weight: 700;
+    color: #423a40;
+    margin-bottom: 31px;
+  }
+
+  .divider {
+    height: 0px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #48b7ab;
+    margin-bottom: 40px;
+  }
+}
+
+.faqs {
+  h2 {
+    margin-bottom: 64px;
+    font-size: 48px;
+  	font-weight: 300;
+  	font-style: normal;
+  	font-stretch: normal;
+  	line-height: 1.0;
+  	letter-spacing: -1px;
+  	color: #423a3f;
+  }
+
+  .faq {
+    &.mdl-cell{
+      margin-top: 0;
+    }
+    margin-bottom: 48px;
+
+    h3 {
+      font-size: 24px;
+    	font-weight: bold;
+    	font-style: normal;
+    	font-stretch: normal;
+    	line-height: 1.0;
+    	letter-spacing: -1.4px;
+	    color: #423a3f;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 16px;
+    	font-weight: normal;
+    	font-style: normal;
+    	font-stretch: normal;
+    	line-height: 1.75;
+    	color: #423a3f;
+      width: 95%;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.content-panel {
+  padding: 0% 5%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-title, .faqs {
+  h1, h2 {
+    @media (max-width: 480px) {
+      font-size: 50px;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+@import "../../../../resources/scss/colors";
+
+.settings-container {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: $staffjoy-palette-white;
+  z-index: 1;
+}
+
+.settings-header {
+  position: absolute;
+  right: 0;
+  left: 0;
+  padding: 24px 24px 4px 24px;
+  background-color: #4caf50;
+  margin-bottom: 24px;
+}
+
+.settings-team-name {
+	font-size: 32px;
+	font-weight: 600;
+	color: $pure-white;
+  margin-bottom: 30px;
+  line-height: 32px;
+}
+
+.settings-tabs-container > div {
+  display: inline-block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+  color: $pure-white;
+  min-width: 84px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.5px;
+  border-bottom: 4px solid $pure-white;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.jobs-table-scrolling-panel {
+  position: absolute;
+  overflow-y: scroll;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  top: 130px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.jobs-table-container {
+  width: 456px;
+	border-radius: 2px;
+	background-color: $pure-white;
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+  margin-left: 24px;
+  padding: 24px 28px 24px 28px;
+}
+
+.color-picker-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}

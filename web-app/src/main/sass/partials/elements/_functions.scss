@@ -1,0 +1,16 @@
+// Breakpoints
+
+@mixin breakpoint($min: 0, $max: 0) {
+  $query: '';
+  @if $min != 0 and $max != 0 {
+    $query: '(min-width: #{$min}) and (max-width: #{$max})';
+  } @else if $min != 0 and $max == 0 {
+    $query: '(min-width: #{$min})';
+  } @else if $min == 0 and $max != 0 {
+    $query: '(max-width: #{$max})';
+  }
+
+  @media #{$query} {
+    @content;
+  }
+}

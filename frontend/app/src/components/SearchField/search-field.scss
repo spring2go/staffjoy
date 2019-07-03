@@ -1,0 +1,45 @@
+@import "../../../../resources/scss/colors";
+
+.search-container {
+
+  &.dark-container {
+    box-sizing: border-box;
+    background-color: $pure-white;
+    border-radius: 2px;
+    padding: 4px;
+
+    i {
+      display: inline-block;
+    }
+
+    .mdl-textfield {
+      padding: 0px !important;
+      display: inline-block;
+    }
+
+    .mdl-textfield__input {
+      border-bottom: 0;
+    }
+
+    .mdl-textfield__label {
+      top: 1px;
+
+      &:after {
+        background: inherit;
+      }
+    }
+  }
+
+  i {
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  .mdl-textfield__input {
+    font-size: 12px;
+  }
+
+  .mdl-textfield__label {
+    font-size: 12px;
+  }
+}

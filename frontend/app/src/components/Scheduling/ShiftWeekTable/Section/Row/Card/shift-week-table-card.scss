@@ -1,0 +1,139 @@
+@import "../../../../../../../../resources/scss/staffjoy";
+
+.shift-week-table-card {
+  min-height: 110px;
+  width: 100%;
+  background-color: $pure-white;
+  box-shadow: $unpublished-card-shadow;
+  box-sizing: border-box;
+  border-radius: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  &.isOver {
+    box-shadow: $can-drop-shadow;
+  }
+
+  &.published {
+    box-shadow: $no-shadow;
+  }
+
+  .shift-details {
+    padding: 6px 12px 4px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .card-label {
+    font-size: 8px;
+    color: $staffjoy-status-neutral-standard;
+    margin-bottom: -6px;
+  }
+
+  .card-time {
+    font-size: 12px;
+    color: $staffjoy-palette-logo-grey;
+  }
+
+  .duration {
+    float: right;
+    color: $staffjoy-palette-logo-grey;
+    font-size: 8px;
+  }
+
+  .shift-z-axis {
+    border-top: solid 1px $medium-grey;
+    overflow: hidden;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+
+    &.published {
+      color: $pure-white;
+    }
+
+    &.z-axis-expanded {
+      background-color: $pure-white;
+      box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.25);
+      color: $staffjoy-palette-logo-grey;
+    }
+
+    .z-axis-picker-wrapper {
+      position: absolute;
+    }
+
+    .z-axis-picker {
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
+      box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.25);
+      background-color: $pure-white; 
+      height: 100px;
+      overflow-y: scroll;
+      position: absolute;
+      top: 0;
+      width: 100%;   
+
+      .z-axis-picker-menu {
+        font-size: 10px;
+        margin: 0;
+        padding: 0;
+
+        li {
+          padding: 5px 5px 0 5px;
+          cursor: pointer;
+
+          .z-axis-picker-option {
+            border-radius: 2px;
+            display: block;
+            padding-left: 5px;
+
+            &.add-job {
+              color: $staffjoy-palette-primary;
+            }
+
+            &:hover {
+              background-color: rgba(65, 58, 63, 0.1);
+            }
+          }
+        }
+
+        li:last-child {
+          padding: 5px;
+        }
+      }   
+    }
+
+    .job-label {
+      padding: 5px;
+      font-size: 12px;
+      font-weight: 600;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      letter-spacing: 0.5px;
+      text-align: center;
+      text-transform: uppercase;
+
+      span {
+        border-radius: 2px;
+        cursor: pointer;
+        display: block;
+
+        &:hover {
+          background-color: rgba(65, 58, 63, 0.1);
+        }
+      }
+    }
+
+    .job-label-none {
+      font-style: italic;
+      text-align: center;
+      color: $staffjoy-palette-logo-grey;
+    }
+  }
+}

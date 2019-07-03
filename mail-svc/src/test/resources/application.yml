@@ -1,0 +1,15 @@
+# application.yml
+
+spring:
+  application:
+    name: email-service
+  jackson:
+    default-property-inclusion: NON_NULL
+
+staffjoy:
+  common:
+    sentry-dsn: ${SENTRY_DSN:https://8822f4ae889b433f9fe72e3904665246@sentry.io/1234888} # mock for test
+    deploy-env: ${DEPLOY:V2}
+  aliyun-access-key: ${ALIYUN_ACCESS_KEY:TEST_ALIYUN_ACCESS_KEY}
+  aliyun-access-secret: ${ALIYUN_ACCESS_SECRET:TEST_ALIYUN_ACCESS_SECRET}
+  email-service-endpoint: http://localhost:8080 # for testing only

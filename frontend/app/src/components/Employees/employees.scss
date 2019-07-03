@@ -1,0 +1,44 @@
+@import "../../../../resources/scss/colors";
+
+.employees {
+  .employees-container {
+    box-sizing: border-box;
+    width: 70%;
+    height: 100%;
+    position: absolute;
+
+    .employees-control-panel {
+      padding: 0 3%;
+      height: 8%;
+      min-height: 70px;
+
+      .search-container {
+        float: left;
+      }
+
+      .employees-control-panel-buttons {
+        float: right;
+        padding: 20px 0;
+      }
+    }
+
+    .scrolling-panel {
+      clear: both;
+      height: 90%;
+      overflow-y: scroll;
+      padding: 0 3%;
+    }
+  }
+
+  .employees-sidebar {
+    position: absolute;
+    min-width: 300px;
+    width: 30%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $pure-white;
+    box-shadow: -1px 0 4px 0 rgba(0, 0, 0, 0.2);
+  }
+}

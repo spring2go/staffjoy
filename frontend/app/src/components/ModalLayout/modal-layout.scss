@@ -1,0 +1,76 @@
+@import "../../../../resources/scss/colors";
+
+.staffjoy-modal-layout {
+  &.single-column {
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    .modal-content {
+      padding: 0 24px 12px 24px;
+    }
+
+    .modal-button-panel {
+      padding: 0 24px;
+
+      .staffjoy-button {
+        margin-right: 32px;
+      }
+    }
+  }
+
+  &.right-side-column {
+    .modal-main {
+      padding-top: 24px;
+      padding-bottom: 24px;
+      width: 440px;
+
+      .modal-main-content {
+        padding: 0 12px 36px 24px;
+
+        .modal-title {
+          font-weight: 300;
+          font-size: 20px;
+          color: $staffjoy-palette-logo-grey;
+          text-align: center;
+          margin-top: 0;
+          margin-bottom: 4px;
+        }
+      }
+
+      .modal-main-button-panel {
+        padding: 0 12px 0 24px;
+
+        .staffjoy-button {
+          margin-right: 32px;
+        }
+      }
+    }
+
+    .modal-side-panel {
+      padding-top: 24px;
+      padding-bottom: 12px;
+      position: absolute;
+      background-color: $staffjoy-palette-primary;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 200px;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+
+      .side-panel-title {
+        font-weight: 300;
+        font-size: 20px;
+        color: $pure-white;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 8px;
+      }
+
+      .scrolling-panel {
+        overflow: scroll;
+        height: 90%;
+      }
+    }
+  }
+}

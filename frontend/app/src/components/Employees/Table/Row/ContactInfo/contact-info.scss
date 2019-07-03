@@ -1,0 +1,10 @@
+@import "../../../../../../../resources/scss/colors";
+
+.staffjoy-table {
+  .table-contact-info-label {
+    &.empty {
+      padding-left: 40px;
+      color: $medium-grey;
+    }
+  }
+}

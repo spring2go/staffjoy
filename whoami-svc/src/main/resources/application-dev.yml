@@ -1,0 +1,16 @@
+server:
+  port: 8084
+
+spring:
+  jpa:
+    show-sql: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+staffjoy:
+  account-service-endpoint: http://localhost:8081
+  company-service-endpoint: http://localhost:8082

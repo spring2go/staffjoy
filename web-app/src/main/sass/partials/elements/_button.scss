@@ -1,0 +1,42 @@
+.mdl-button, .button {
+  color: white;
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.button {
+  display: inline-block;
+  padding: 13px 25px 13px;
+  background: #795aad;
+  line-height: 1;
+  border: 0;
+  border-radius: 3px;
+  transition: background 0.3s;
+
+  white-space: nowrap;
+  
+  &--outline {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+
+    &.white-bg {
+      border: 1px solid #48b7ab;
+      color: #48b7ab;
+    }
+  }
+  
+  &--large {
+    padding: 20px 40px;
+    font-size: 14px;
+  }
+    
+  &:hover {
+    opacity: .7;
+    transition: opacity 200ms;
+  }
+}

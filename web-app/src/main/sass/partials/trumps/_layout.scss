@@ -1,0 +1,260 @@
+// # Layout Trumps
+
+// ## Floats
+// Add/remove floats.
+
+//[c]
+//     <div class="float--right">content</div>
+//[/c]
+
+.float--right {
+  float: right !important;
+}
+
+.float--left {
+  float: left !important;
+}
+
+.float--none {
+  float: none !important;
+}
+
+// ## Anchor
+
+.anchor--middle {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+// ### Flexbox anchors, moves element to right or left.
+
+.anchor--right {
+  margin-left: auto !important;
+}
+
+.anchor--left {
+  margin-right: auto !important;
+}
+
+.anchor--top {
+  margin-bottom: auto !important;
+}
+
+.anchor--bottom {
+  margin-top: auto !important;
+}
+
+// ## Text Alignment
+
+// <div class="example html">
+//     <div class="text--right">content</div>
+// </div>
+
+.text--left {
+  text-align: left !important;
+}
+
+.text--center {
+  text-align: center !important;
+}
+
+.text--right {
+  text-align: right !important;
+}
+
+// ## Display
+
+//[c]
+//     <div class="display--inline-block">content</div>
+//[/c]
+
+.display--block {
+  display: block !important;
+}
+
+.display--inline-block {
+  display: inline-block !important;
+}
+
+.display--inline {
+  display: inline !important;
+}
+
+.display--none {
+  display: none !important;
+}
+
+// ## Faded
+// Sets opacity to 0.5. Useful for a simulated disabled state.
+
+// <div class="example html">
+//     <div class="faded push--bottom">This text is faded. As is the icon below.</div>
+//     <svg class="lego-icon faded">
+//       <use xlink:href="#collaborators"></use>
+//     </svg>
+// </div>
+
+.faded {
+  opacity: 0.5 !important;
+}
+
+// ## Vertical Alignment for table cells.
+
+//[c]
+//     <div class="vertical-align--bottom">content</div>
+//[/c]
+
+.vertical-align--top {
+  vertical-align: top !important;
+}
+
+.vertical-align--middle {
+  vertical-align: middle !important;
+}
+
+.vertical-align--bottom {
+  vertical-align: bottom !important;
+}
+
+// Border Radius
+
+.rounded--small {
+  border-radius: 2px;
+}
+
+.rounded--medium {
+  border-radius: 4px;
+}
+
+.rounded--large {
+  border-radius: 6px;
+}
+
+// ## Overflow
+// Force scroll bars when overflowed.
+
+.overflow--hidden {
+  overflow: hidden !important;
+}
+
+.overflow-x--auto {
+  overflow-x: auto !important;
+}
+
+.overflow-y--auto {
+  overflow-y: auto !important;
+}
+
+// ## Remove Borders
+// Remove borders from all or just one side.
+
+.no-border {
+  border: 0 !important;
+}
+
+.no-border--top {
+  border-top: none !important;
+}
+
+.no-border--right {
+  border-right: none !important;
+}
+
+.no-border--bottom {
+  border-bottom: none !important;
+}
+
+.no-border--left {
+  border-left: none !important;
+}
+
+// ## Max Scroll
+// Set a max-height to provide scrolling.
+
+.max-scroll--small {
+  max-height: 100px !important;
+  overflow-y: auto !important;
+}
+
+.max-scroll--medium {
+  max-height: 200px !important;
+  overflow-y: auto !important;
+}
+
+.max-scroll--large {
+  max-height: 300px !important;
+  overflow-y: auto !important;
+}
+
+// ## Max Width
+// Set a max-width for content.
+
+.max-width--large {
+  max-width: 800px !important;
+}
+
+// ## Cursors
+// Helpers for cursors.
+
+.cursor--default {
+  cursor: default !important;
+}
+
+.cursor--help {
+  cursor: help !important;
+}
+
+.cursor--move {
+  cursor: move !important;
+}
+
+.cursor--pointer {
+  cursor: pointer !important;
+}
+
+.cursor--text {
+  cursor: text !important;
+}
+
+.pointer-events--none {
+  pointer-events: none !important;
+}
+
+// ## Text Area No Resize
+// Prevent resizing of textarea. Use only if absolutely necessary.
+
+.no-resize {
+  resize: none !important;
+}
+
+// ## Position
+// Change the positioning of element.
+
+.position--relative {
+  position: relative !important;
+}
+
+.position--absolute {
+  position: absolute !important;
+}
+
+.position--fixed {
+  position: fixed !important;
+}
+
+
+// ## Visibility
+// Change the positioning of element.
+
+.visibility--hidden {
+  visibility: hidden !important;
+}
+
+// ## Prevent User Selection
+// Text inside element will not be selectable by the user.
+
+.unselectable {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}

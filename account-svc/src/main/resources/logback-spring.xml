@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="ConsoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- On Windows machines setting withJansi to true enables ANSI
+         color code interpretation by the Jansi library. This requires
+         org.fusesource.jansi:jansi:1.8 on the class path.  Note that
+         Unix-based operating systems such as Linux and Mac OS X
+         support ANSI color codes by default. -->
+        <withJansi>true</withJansi>
+        <encoder>
+            <pattern>%d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level) %logger{36}.%M - %msg%n</pattern>
+        </encoder>
+        <!--layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>
+                %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n
+            </Pattern>
+        </layout-->
+    </appender>
+
+    <root level="warn">
+        <appender-ref ref="ConsoleAppender" />
+    </root>
+    <logger name="xyz.staffjoy" additivity="false" level="info">
+        <appender-ref ref="ConsoleAppender" />
+    </logger>
+</configuration>

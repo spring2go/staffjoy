@@ -1,0 +1,12 @@
+server:
+  port: 8089
+staffjoy:
+  white-list-only: true
+  white-list-phone-numbers: ${WHITE_LIST_PHONE_NUMBERS:18001112222}
+  concurrency: 1
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

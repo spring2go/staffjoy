@@ -1,0 +1,14 @@
+server:
+  port: 8087
+
+staffjoy:
+  email-service-endpoint: http://localhost:8088
+  sms-service-endpoint: http://localhost:8089
+  company-service-endpoint: http://localhost:8082
+  account-service-endpoint: http://localhost:8081
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

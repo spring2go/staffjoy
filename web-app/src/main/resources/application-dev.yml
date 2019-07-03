@@ -1,0 +1,11 @@
+spring:
+  thymeleaf:
+    cache: false # Disable template caching for local development
+
+server:
+  port: 8086
+
+staffjoy:
+  email-service-endpoint: http://localhost:8088
+  company-service-endpoint: http://localhost:8082
+  account-service-endpoint: http://localhost:8081

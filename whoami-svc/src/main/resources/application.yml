@@ -1,0 +1,16 @@
+# application.yml
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: whoami-service
+
+staffjoy:
+  common:
+    sentry-dsn: ${SENTRY_DSN}
+    deploy-env: ${DEPLOY:V2}
+  company-service-endpoint: ${COMPANY_SERVICE_ENDPOINT:http://company-service:8080}
+  account-service-endpoint: ${ACCOUNT_SERVICE_ENDPOINT:http://account-service:8080}
+  intercom-app-id: ${INTERCOM_APP_ID}
+  intercom-signing-secret: ${INTERCOM_SIGNING_SECRET}

@@ -1,0 +1,20 @@
+@import "../../../../../../../../resources/scss/colors";
+
+.shift-week-table-empty-cell {
+  min-height: 110px;
+  width: 100%;
+  border-radius: 2px;
+  cursor: pointer;
+  background-color: $staffjoy-logo-grey-alpha-10;
+
+  &.isHovering {
+    background: url(./plus-icon.svg) $staffjoy-bg-light-active;
+    background-size: 36px 36px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &.card-is-over {
+    background-color: $staffjoy-bg-light-active-hover;
+  }
+}

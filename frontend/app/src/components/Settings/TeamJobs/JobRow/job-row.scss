@@ -1,0 +1,95 @@
+@import "../../../../../../resources/scss/colors";
+
+.table-row-job {
+
+  .job-name-input {
+    background-color: transparent;
+    border: 1px solid transparent;
+  }
+
+  &:hover .job-delete-cell svg {
+    visibility: visible;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.job-name-cell {
+  width: 60%;
+  text-align: left !important;
+
+  .mdl-spinner {
+    position: absolute;
+    top: 15px;
+    height: 18px;
+    width: 18px;
+
+    .mdl-spinner__circle {
+      border-width: 2px;
+    }
+  }
+}
+
+.job-name-input {
+  border: 1px solid $pure-white;
+  display: inline-block;
+  padding: 3px;
+  vertical-align: top;
+
+  &:hover {
+    background-color: $pure-white !important;
+    border: 1px solid #CCC !important;
+  }
+}
+
+.job-color-cell {
+  position: relative;
+  overflow: visible !important;
+  width: 30%;
+  text-align: left !important;
+}
+
+.job-color-circle {
+  width: 26px;
+  height: 26px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 13px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.color-picker-container {
+  z-index: 99;
+  position: absolute;
+  left: -187px;
+  bottom: -91px;
+}
+
+.job-delete-cell {
+  padding-right: 36px !important;
+
+  svg {
+    visibility: hidden;
+  }
+}
+
+.job-form-field-success {
+  position: absolute;
+  left: 180px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  .material-icons {
+    color: $staffjoy-status-success-standard;
+    font-size: 14px;
+    position: absolute;
+    margin: 0;
+    top: 2px;
+    left: -20px;
+  }
+}

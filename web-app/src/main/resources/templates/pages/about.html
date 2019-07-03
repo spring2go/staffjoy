@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:with="http://www.thymeleaf.org/extras/with"
+      layout:decorate="~{layout}"
+      with:includeNavigation="true"
+      with:includeFooter="true"
+      with:includeScripts="true"
+>
+<th:block layout:fragment="content">
+    <div class="mission">
+        <img src="/assets/images/about/about.svg" alt="Logo about scheduling and all the things that are related to it" />
+        <h1>About Staffjoy</h1>
+        <h3>A small startup changing how businesses schedule</h3>
+    </div>
+
+    <div class="story max-contained">
+        <h2>Our Story</h2>
+        <p>
+            Staffjoy officially launched in the fall of 2015, but the idea was born a few years earlier in our college math classes. Staffjoy creates flexibility for workers and businesses to help them thrive. We are backed by leading venture capitalists, including Caffeinated Capital and Y Combinator. We build systems that manage workers with efficiency and fairness.
+        </p>
+    </div>
+
+    <div class="team max-contained">
+        <h2>Meet The Team</h2>
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop">
+                <img src="/assets/images/about/team/philip.jpg" alt="Philip I. Thomas"/>
+                <h3>Philip Thomas</h3>
+                <h4>Founder and CEO</h4>
+                <p>
+                    Philip defends our office with Krav Maga skills, and maintains a strict ketogenic diet. He loves physics, single-origin coffee beans, and salsa music!
+                </p>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop">
+                <img src="/assets/images/about/team/tommy.jpg" alt="Tommy Koo" />
+                <h3>Tommy Koo</h3>
+                <h4>Product Designer</h4>
+                <p>
+                    Tommy was just as outraged as the rest of the internet at Frank Ocean’s most recent album release video stream. He keeps the rest of the office up to speed on meme’s and music news. He user tested this copy to make sure readers would love it.
+                </p>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop">
+                <img src="/assets/images/about/team/angelica.jpg" alt="Angelica Valentine" />
+                <h3>Angelica Valentine</h3>
+                <h4>Marketing Manager</h4>
+                <p>
+                    Angelica is an Oakland native who feels very strongly about the Oxford comma. She can often be found eating sweets and basking in the sun in the Bay Area and far beyond.
+                </p>
+            </div>
+        </div>
+    </div>
+</th:block>
+</html>

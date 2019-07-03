@@ -1,0 +1,50 @@
+<head xmlns:th="http://www.thymeleaf.org">
+    <meta charset="UTF-8">
+    <title th:text="${page.title}">Staffjoy</title>
+    <link rel="stylesheet" th:href="'/assets/css/main.css?version='+${page.version}">
+    <link rel="stylesheet" th:href="'/assets/css/staffjoy.css?version='+${page.version}">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700,800' rel='stylesheet' type='text/css'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="description" th:content="${page.description}">
+
+    <link rel="icon" type="image/png" href="/assets/images/icons/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/assets/images/icons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/assets/images/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="/assets/images/icons/favicon-128.png" sizes="128x128" />
+    <link rel="icon" type="image/png" href="/assets/images/icons/android-icon-192x192.png" sizes="192x192" >
+    <link rel="icon" type="image/png" href="/assets/images/icons/favicon-196x196.png" sizes="196x196" />
+
+    <link rel="apple-touch-icon-precomposed" href="/assets/images/icons/apple-touch-icon-57x57.png" sizes="57x57" />
+    <link rel="apple-touch-icon-precomposed" href="/assets/images/icons/apple-touch-icon-60x60.png" sizes="60x60" />
+    <link rel="apple-touch-icon-precomposed" href="/assets/images/icons/apple-touch-icon-72x72.png" sizes="72x72" />
+    <link rel="apple-touch-icon-precomposed" href="/assets/images/icons/apple-touch-icon-76x76.png" sizes="76x76" />
+    <link rel="apple-touch-icon-precomposed" href="/assets/images/icons/apple-touch-icon-114x114.png" sizes="114x114" />
+    <link rel="apple-touch-icon-precomposed" href="/assets/images/icons/apple-touch-icon-120x120.png" sizes="120x120" />
+    <link rel="apple-touch-icon-precomposed" href="/assets/images/icons/apple-touch-icon-144x144.png" sizes="144x144" />
+    <link rel="apple-touch-icon-precomposed" href="/assets/images/icons/apple-touch-icon-152x152.png" sizes="152x152" />
+    <link rel="apple-touch-icon-precomposed" href="/assets/images/icons/apple-icon-180x180.png" sizes="180x180" >
+
+    <meta name="application-name" content="Staffjoy"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="/assets/images/icons/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="/assets/images/icons/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="/assets/images/icons/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="/assets/images/icons/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="/assets/images/icons/mstile-310x310.png" />
+
+    <meta name="theme-color" content="#FFFFFF">
+
+    <meta property="og:site_name" content="Staffjoy"/>
+    <meta property="og:title" th:content="${page.title}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:link" content="https://www.staffjoy.xyz"/>
+    <meta th:if="${CoverPhoto}" th:content="'https://www.staffjoy.xyz'+${CoverPhoto}"/>
+    <meta th:unless="${CoverPhoto}" content="https://www.staffjoy.xyz/assets/images/staffjoy-logos/open-graph.jpg" />
+
+    <meta property="twitter:card" content="summary"/>
+    <meta property="twitter:title" content="Staffjoy"/>
+    <meta property="twitter:description" content="Share schedules in less time">
+    <meta property="twitter:site" content="@staffjoy"/>
+</head>

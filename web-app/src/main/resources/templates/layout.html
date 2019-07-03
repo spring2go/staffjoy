@@ -1,0 +1,31 @@
+<!DOCKTYPE html>
+
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<th:block layout:insert="~{fragments/header}"/>
+
+<!--https://stackoverflow.com/questions/23726015/conditional-attribute-using-thymeleaf-->
+<body th:attrappend="id=${page.cssId != null}?@{__${page.cssId}__}">
+
+<th:block th:if="${includeNavigation}">
+    <th:block layout:insert="~{fragments/navigation}"/>
+</th:block>
+
+<th:block th:if="${includeBlogNavigation}">
+    <th:block layout:insert="~{fragments/blog_navigation}"/>
+</th:block>
+
+<th:block layout:fragment="content"/>
+
+<th:block th:if="${includeFooter}">
+    <th:block layout:insert="~{fragments/footer}"/>
+</th:block>
+
+<th:block th:if="${includeScripts}" >
+    <th:block layout:insert="~{fragments/scripts}"/>
+</th:block>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:with="http://www.thymeleaf.org/extras/with"
+      layout:decorate="~{layout}"
+      with:includeScripts="true"
+>
+<th:block layout:fragment="content">
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-phone">
+            <div class="back-button">
+                <a class="button button--outline" th:href="@{/}" href="/"><i class="fa fa-arrow-left" aria-hidden="true"></i>Go Back</a>
+            </div>
+        </div>
+        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone mdl-cell--1-offset-tablet">
+            <div class="main-area">
+                <img src="/assets/images/staffjoy-logos/logo-white.svg" alt="Staffjoy Logo">
+                <h1>Get immediate access to the new Staffjoy application:</h1>
+
+                <form class="sign-up-form" id="v2-signup-form" name="v2-signup-form" th:action="@{/confirm}" th:method="post">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label sign-up-area">
+                        <input class="mdl-textfield__input" name="email" type="text" id="sign-up-form-main" autofocus>
+                        <label class="mdl-textfield__label" for="sign-up-form-main">Email</label>
+                    </div>
+                    <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent sign-up-submit" name="subscribe" value="Sign Up For Free" id="v2-signup" />
+                </form>
+                <p>Already have an account? <a th:href="@{/login}" href="login.html">Login Here</a></p>
+                <p>By clicking 'Sign Up', I agree to Staffjoy's <a th:href="@{/terms}" href="terms.html">Terms of Service</a> and <a th:href="@{/privacy-policy}" href="privacypolicy.html">Privacy Policy</a></p>
+
+                <ul class="sign-up-nav">
+                    <li><a href="https://blog.staffjoy.com/">Blog</a></li>
+                    <li><a th:href="@{/pricing}" href="pricing.html">Pricing</a></li>
+                    <li><a href="mailto:help@staffjoy.xyz" id="intercom-launcher">Support</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</th:block>
+</html>

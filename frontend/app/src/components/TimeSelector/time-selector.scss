@@ -1,0 +1,48 @@
+@import "../../../../resources/scss/colors";
+
+.time-selector {
+  padding-bottom: 20px;
+  .input-fields {
+    .mdl-textfield:first-child {
+      margin-right: 54px;
+    }
+
+    .mdl-textfield__input {
+      &.active {
+        border-bottom: 2px solid $staffjoy-palette-primary;
+      }
+    }
+  }
+
+  .selector-buttons {
+    .meridiem-buttons {
+      margin-bottom: 12px;
+      .staffjoy-button:first-child {
+        margin-right: 12px;
+      }
+    }
+
+    .wrap-list {
+      display: inline-flex;
+      flex-wrap: wrap;
+      padding-left: 0;
+      margin: 0;
+      list-style-type: none;
+    }
+
+    .hour-buttons {
+      width: 72%;
+      max-width: 280px;
+    }
+
+    .minute-buttons {
+      width: 28%;
+      padding-left: 10px;
+    }
+
+    .time-selector-number-button {
+      margin-right: 12px;
+      margin-bottom: 4px;
+    }
+  }
+}

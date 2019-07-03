@@ -1,0 +1,22 @@
+.mdl-textfield.staffjoy-text-field {
+    &.is-invalid {
+      .mdl-textfield__input {
+        border-bottom-color: rgba(0,0,0, 0.12) !important;
+      }
+    }
+  
+    &.is-invalid:not(.is-focused) {
+      .mdl-textfield__label {
+        color: rgba(0, 0, 0, 0.258824) !important;
+        font-size: 16px;
+      }
+    }
+  
+    &.is-invalid.is-dirty {
+      .mdl-textfield__label {
+        color: rgb(213,0,0) !important;
+        font-size: 12px;
+      }
+    }
+  }
+  

@@ -1,0 +1,66 @@
+spring:
+  application:
+    name: faraday-service
+
+server:
+  error:
+    whitelabel:
+      enabled: false
+
+staffjoy:
+  common:
+    sentry-dsn: ${SENTRY_DSN:https://8822f4ae889b433f9fe72e3904665246@sentry.io/1234888}
+    deploy-env: ${DEPLOY:V2}
+  signing-secret: ${SIGNING_SECRET:TEST_SIGNING_SECRET}
+
+faraday:
+  enable_programmatic_mapping: false
+  retrying:
+    max-attempts: 3
+    retry-on:
+      client-http-error: false
+      server-http-error: false
+      exceptions: java.nio.channels.UnresolvedAddressException
+  tracing:
+    enabled: false
+  mappings:
+    -
+      name: faraday_route
+      host: faraday.staffjoy-v2.local
+      destinations: invalid%:httpbin.org
+    -
+      name: account_route
+      host: account.staffjoy-v2.local
+      destinations: localhost:8081
+    -
+      name: company_route
+      host: company.staffjoy-v2.local
+      destinations: localhost:8082
+    -
+      name: ical_route
+      host: ical.staffjoy-v2.local
+      destinations: localhost:8086
+    -
+      name: whoami_route
+      host: whoami.staffjoy-v2.local
+      destinations: localhost:8084
+    -
+      name: superpowers_route
+      host: superpowers.staffjoy-v2.local
+      destinations: localhost:8085
+    -
+      name: www_route
+      host: www.staffjoy-v2.local
+      destinations: localhost:8086,localhost:8087
+      retryable: true
+      timeout:
+        connect: 100
+        read: 500
+    -
+      name: app_route
+      host: app.staffjoy-v2.local
+      destinations: localhost:9000
+    -
+      name: myaccount_route
+      host: myaccount.staffjoy-v2.local
+      destinations: localhost:9001

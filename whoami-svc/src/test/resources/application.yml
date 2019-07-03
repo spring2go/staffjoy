@@ -1,0 +1,15 @@
+# application.yml
+
+spring:
+  application:
+    name: whoami-service
+
+staffjoy:
+  common:
+    sentry-dsn: ${SENTRY_DSN:https://8822f4ae889b433f9fe72e3904665246@sentry.io/1234888}
+    deploy-env: ${DEPLOY:V2}
+  intercom-app-id: ${INTERCOM_APP_ID:TEST_INTERCOM_APP_ID}
+  intercom-signing-secret: ${INTERCOM_SIGNING_SECRET:TEST_INTERCOM_SIGNING_SECRET}
+  whoami-service-endpoint: http://localhost:8080 # for testing only
+  account-service-endpoint: http://localhost:8081
+  company-service-endpoint: http://localhost:8082

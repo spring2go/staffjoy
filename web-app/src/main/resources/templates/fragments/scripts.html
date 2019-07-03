@@ -1,0 +1,36 @@
+<th:block xmlns:th="http://www.thymeleaf.org">
+    <script src="https://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+    <script th:src="'/assets/js/analytics.js?version='+${page.version}"></script>
+    <script th:src="'/assets/js/common.js?version='+${page.version}"></script>
+    <script th:src="'/assets/js/bundle.js?version='+${page.version}"></script>
+
+    <th:block th:if="${page.templateName == 'home'}">
+    <script th:src="'/assets/js/typed.js?version='+${page.version}"></script>
+    <script th:src="'/assets/js/home.js?version='+${page.version}"></script>
+    </th:block>
+
+    <th:block th:if="${page.templateName == 'new_company'}">
+        <script src="https://cdn.bootcss.com/moment.js/2.16.0/moment-with-locales.min.js"></script>
+        <script src="https://cdn.bootcss.com/moment-timezone/0.5.9/moment-timezone-with-data.js"></script>
+    <script language="javascript">
+        $(document).ready(function() {
+            var tz = moment.tz.guess();
+            $('#tz-val').val(tz);
+            $("#v2-new-company-form").on('submit',function(e){
+                var $form = $(this);
+
+                if ($form.data('submitted') === true) {
+                    // Previously submitted - don't submit again
+                    e.preventDefault();
+                } else {
+                    // Mark it so that the next submit can be ignored
+                    $form.data('submitted', true);
+                }
+            });
+
+            // Keep chainability
+            return this;
+        });
+    </script>
+    </th:block>
+</th:block>

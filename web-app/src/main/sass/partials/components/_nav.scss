@@ -1,0 +1,74 @@
+.nav {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  
+  &__item {
+    margin-left: 40px;
+
+    &--desktop {
+      display: block;
+    }
+
+    &--mobile {
+      display: none;
+    }
+
+    a {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 13px;
+      color: #fff;
+      font-weight: 600;
+    }
+  }
+
+  &__logo {
+    flex: 1;
+    margin-left: 0;
+    
+    img {
+      width: 150px;
+      height: 37px;
+    }
+  }
+
+  @include breakpoint($max: 800px) {
+    display: block;
+    margin-left: -30px;
+    margin-right: -30px;
+    
+    &__item {
+      border-bottom: 1px solid rgba(255,255,255,.2);
+      margin-left: 0;
+      background: rgba(255,255,255,.1);
+      
+      &--desktop {
+        display: none;
+      }
+
+      &--mobile {
+        display: block;
+      }
+    }
+    
+    a {
+      padding: 10px 30px;
+      display: block;
+    }
+    
+    &__logo {
+      background: transparent;
+      
+      a {
+        padding-top: 0;
+        padding-bottom: 15px;
+      }
+
+      img {
+        width: 120px;
+        height: 30px;
+      }
+    }
+  }
+}

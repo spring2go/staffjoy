@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:with="http://www.thymeleaf.org/extras/with"
+      layout:decorate="~{layout}"
+      with:includeScripts="true"
+>
+<th:block layout:fragment="content">
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-phone">
+        </div>
+        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone mdl-cell--1-offset-tablet">
+            <div class="main-area">
+                <img src="/assets/images/staffjoy-logos/logo-white.svg" alt="Staffjoy Logo">
+                <h1>Finish your profile</h1>
+
+                <form class="sign-up-form" id="v2-signup-form" name="v2-signup-form" th:action="@{/activate/__${page.token}__}" th:method="post">
+                    <p th:if="${page.errorMessage}" class="warning-message" th:text="${page.errorMessage}" />
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label sign-up-area">
+                        <input class="mdl-textfield__input" id = "email" name="email" type="text" th:value="${page.email}" disabled>
+                        <label class="mdl-textfield__label" for="email">Email</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label sign-up-area">
+                        <input class="mdl-textfield__input" id = "password" name="password" type="password" autofocus>
+                        <label class="mdl-textfield__label" for="password">Password</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label sign-up-area">
+                        <input class="mdl-textfield__input" id = "name" name="name" type="text" th:value="${page.name}">
+                        <label class="mdl-textfield__label" for="name">Full Name</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label sign-up-area">
+                        <input class="mdl-textfield__input" id = "phonenumber" name="phonenumber" type="text" th:value="${page.phonenumber}">
+                        <label class="mdl-textfield__label" for="phonenumber">Mobile Phone Number</label>
+                    </div>
+                    <label class="mdl-checkbox tos-area" for="tos-checkbox">
+                        <input type="checkbox" id="tos-checkbox" class="mdl-checkbox__input" name="tos">
+                        <span class="mdl-checkbox__label">I agree to the <a th:href="@{/terms}" href="terms.html">Terms of Service</a> and <a th:href="@{/privacy-policy}" href="privacypolicy.html">Privacy Policy</a>.</span>
+                    </label>
+                    <input type="submit" class="mdl-button mdl-button--raised mdl-button--accent sign-up-submit" name="subscribe" value="Next" id="v2-signup" />
+                </form>
+                <ul class="sign-up-nav">
+                    <li><a href="mailto:help@staffjoy.xyz" id="intercom-launcher">Support</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</th:block>
+</html>

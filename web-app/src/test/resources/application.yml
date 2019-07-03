@@ -1,0 +1,23 @@
+# application.yml
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: www-service
+
+server:
+  error:
+    whitelabel:
+      enabled: false
+
+staffjoy:
+  common:
+    sentry-dsn: ${SENTRY_DSN:https://8822f4ae889b433f9fe72e3904665246@sentry.io/1234888}
+    deploy-env: ${DEPLOY:V2}
+  signing-secret: ${SIGNING_SECRET:TEST_SIGNING_SECRET}
+  email-service-endpoint: http://email-service:8080
+  company-service-endpoint: http://company-service:8080
+  account-service-endpoint: http://account-service:8080
+  recaptcha-public: ${RECAPTCHA_PUBLIC:TEST_RECAPTCHA_PUBLIC}
+  recaptcha-private: ${RECAPTCHA_PRIVATE:TEST_RECAPTCHA_PRIVATE}

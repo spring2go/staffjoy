@@ -1,0 +1,62 @@
+.endorse {
+  display: flex;
+  margin-bottom: 60px;
+  font-size: 14px;
+    
+  &__item {
+    padding: 40px;
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    border-right: 1px solid #ddd;
+    
+    &--light {
+      justify-content: flex-start;
+    }
+    
+    &:last-child {
+      border-right: none;
+    }
+  }
+  
+  &__container {
+    display: flex;
+  }
+  
+  &__img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #fff;
+    margin-right: 20px;
+    background-size: 100% auto;
+    flex: none;
+  }
+  
+  &__credit {
+    opacity: .5;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    font-style: italic;
+  }
+    
+  &__text {
+    min-width: 0;
+    max-width: 100%;
+  }
+  
+  @include breakpoint($max: 800px) {
+    display: block;
+    
+    &__item {
+      width: auto;
+      justify-content: flex-start;
+      border: none;
+    }
+    
+    &__img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}

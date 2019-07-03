@@ -1,0 +1,58 @@
+@import "../../../../../resources/scss/colors";
+
+.user-context {
+  position: absolute;
+  bottom: 0;
+  padding: 15px 0 15px 10px;
+
+  &:hover {
+    background-color: $staffjoy-bg-light-active-hover;
+  }
+
+  .profile-icon {
+    width: 35px;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+
+  .user-menu-tag {
+    display: inline-block;
+    width: 144px;
+    vertical-align: middle;
+
+    .user-name {
+      font-size: 16px;
+      color: $staffjoy-palette-primary;
+    }
+
+    .company-name {
+      font-size: 12px;
+      color: $medium-grey;
+    }
+  }
+
+  .mdl-menu {
+    a {
+      text-decoration: none;
+    }
+
+    .mdl-menu__item {
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 13px;
+      color: $staffjoy-palette-logo-grey;
+
+      &.active {
+        background-color: $staffjoy-bg-light-active;
+
+        &:hover {
+          background-color: $staffjoy-bg-light-active-hover;
+        }
+      }
+
+      &.separation {
+        margin-top: 15px;
+      }
+    }
+  }
+}

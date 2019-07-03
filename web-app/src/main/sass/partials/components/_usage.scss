@@ -1,0 +1,79 @@
+.usage {
+  padding: 100px 0 50px;
+
+  h2 {
+    line-height: 1.4;
+  }
+  
+  &__list {
+    margin: 10px 0 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    font-size: 16px;
+    color: #999;
+  
+    > li {
+      margin: 0 10px;
+    }
+  }
+  
+  &__logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    > li {
+      margin: 0 30px;
+      flex: none;
+    }
+    
+    &--bellhops {
+      background: url(../images/homepage/customer-logos/bellhops.svg) no-repeat;
+      width: 127px;
+      height: 50px;
+      opacity: .2;
+    }
+    
+    &--partnerhero {
+      background: url(../images/homepage/customer-logos/partnerhero.png) no-repeat;
+      background-size: 100% auto;
+      width: 180px;
+      height: 40px;
+      opacity: .3;
+    }
+    
+    &--invisible-girlfriend {
+      background: url(../images/homepage/customer-logos/invisible-girlfriend.png) no-repeat;
+      background-size: 100% auto;
+      width: 249px;
+      height: 27px;
+      opacity: .3;
+    }
+
+    &__item {
+      width: 200px;
+      height: 50px;
+      background: #eee;
+      margin: 0 20px;
+    }
+  }
+  
+  @include breakpoint($max: 800px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+    &__logos {
+      display: block;
+      
+      > li {
+        margin: 0 auto 20px;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

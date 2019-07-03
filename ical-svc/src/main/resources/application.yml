@@ -1,0 +1,13 @@
+# application.yml
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: ical-service
+
+staffjoy:
+  common:
+    sentry-dsn: ${SENTRY_DSN}
+    deploy-env: ${DEPLOY:V2}
+  company-service-endpoint: http://company-service:8080

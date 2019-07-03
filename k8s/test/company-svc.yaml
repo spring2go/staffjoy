@@ -1,0 +1,43 @@
+# https://matthewpalmer.net/kubernetes-app-developer/articles/kubernetes-apiversion-definition-guide.html
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: company-svc-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: company-svc
+        env: test
+    spec:
+      containers:
+        - name: company-svc
+          image: company-svc
+          imagePullPolicy: Never
+          ports:
+            - name: http-port
+              containerPort: 80
+          envFrom:
+            - configMapRef:
+                name: common-config
+          env:
+            - name: DATASOURCE_URL
+              value: jdbc:mysql://mysql-svc/staffjoy_company?useUnicode=true&characterEncoding=utf-8
+            - name: DATASOURCE_USERNAME
+              value: root
+            - name: DATASOURCE_PASSWORD
+              value: root
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: company-service
+spec:
+  selector:
+    app: company-svc
+    env: test
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

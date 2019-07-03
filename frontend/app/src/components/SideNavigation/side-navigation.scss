@@ -1,0 +1,23 @@
+@import "../../../../resources/scss/colors";
+
+.mdl-layout__drawer {
+  width: 200px !important;
+  overflow-y: visible !important;
+
+  .mdl-navigation__link {
+    padding: 16px 30px !important;
+    text-transform: uppercase;
+
+    &.active {
+      background-color: $staffjoy-bg-light-active;
+    }
+
+    &:hover{
+      background-color: $staffjoy-bg-light-active-hover !important;
+    }
+  }
+
+  .team-navigation {
+    margin-top: 30px;
+  }
+}

@@ -1,0 +1,16 @@
+.shift-week-table-section {
+    display: flex;
+    margin-bottom: 12px;
+  
+    .section-info {
+      width: 15%;
+      min-width: 120px;
+      display: inline-block;
+    }
+  
+    .shift-rows {
+      width: 85%;
+      display: inline-block;
+    }
+  }
+  

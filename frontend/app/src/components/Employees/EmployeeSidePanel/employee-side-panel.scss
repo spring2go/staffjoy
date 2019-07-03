@@ -1,0 +1,17 @@
+@import "../../../../../resources/scss/colors";
+
+.employee-side-panel {
+  padding: 24px 32px;
+
+  .info-section {
+    border-top: solid 1px rgba(65, 58, 64, 0.2);
+    padding: 20px 0px 32px;
+
+    .info-section-title {
+      color: $staffjoy-palette-logo-grey;
+      margin: 0 0 24px;
+      font-size: 16px;
+      font-weight: 300;
+    }
+  }
+}

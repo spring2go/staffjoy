@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:with="http://www.thymeleaf.org/extras/with"
+      layout:decorate="~{layout}"
+      with:includeScripts="true"
+>
+<th:block layout:fragment="content">
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-phone">
+        </div>
+        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone mdl-cell--1-offset-tablet">
+            <div class="main-area">
+                <img src="/assets/images/staffjoy-logos/logo-white.svg" alt="Staffjoy Logo">
+                <h1>Set your new password</h1>
+
+                <form class="sign-up-form" id="v2-signup-form" name="v2-signup-form" th:action="@{/reset/__${page.token}__}" th:method="post">
+                    <p th:if="${page.errorMessage}" class="warning-message" th:text="${page.errorMessage}" />
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label sign-up-area">
+                        <input class="mdl-textfield__input" name="password" type="password" id="sign-up-form-main" autofocus>
+                        <label class="mdl-textfield__label" for="sign-up-form-main">New Password</label>
+                    </div>
+                    <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent sign-up-submit" name="subscribe" value="Update password" id="v2-signup" />
+                </form>
+
+                <ul class="sign-up-nav">
+                    <li><a href="mailto:help@staffjoy.xyz" id="intercom-launcher">Support</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</th:block>
+</html>

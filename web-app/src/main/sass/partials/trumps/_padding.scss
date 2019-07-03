@@ -1,0 +1,199 @@
+// # Padding Trumps
+
+// ## Add Paddings
+// Pad elements in any direction.
+
+//[c]
+//     <div class="push--soft">content</div>
+//[/c]
+
+.soft {
+  padding: spacer(1) !important;
+}
+
+.soft--top {
+  padding-top: spacer(1) !important;
+}
+
+.soft--right {
+  padding-right: spacer(1) !important;
+}
+
+.soft--bottom {
+  padding-bottom: spacer(1) !important;
+}
+
+.soft--left {
+  padding-left: spacer(1) !important;
+}
+
+.soft--ends {
+  padding-top: spacer(1) !important;
+  padding-bottom: spacer(1) !important;
+}
+
+.soft--sides {
+  padding-right: spacer(1) !important;
+  padding-left: spacer(1) !important;
+}
+
+.soft-half {
+  padding: spacer(0.5) !important;
+}
+
+.soft-half--top {
+  padding-top: spacer(0.5) !important;
+}
+
+.soft-half--right {
+  padding-right: spacer(0.5) !important;
+}
+
+.soft-half--bottom {
+  padding-bottom: spacer(0.5) !important;
+}
+
+.soft-half--left {
+  padding-left: spacer(0.5) !important;
+}
+
+.soft-half--ends {
+  padding-top: spacer(0.5) !important;
+  padding-bottom: spacer(0.5) !important;
+}
+
+.soft-half--sides {
+  padding-right: spacer(0.5) !important;
+  padding-left: spacer(0.5) !important;
+}
+
+.soft-one-and-half--sides {
+  padding-right: spacer(1.5) !important;
+  padding-left: spacer(1.5) !important;
+}
+
+.soft-double {
+  padding: spacer(2) !important;
+}
+
+.soft-double--top {
+  padding-top: spacer(2) !important;
+}
+
+.soft-double--right {
+  padding-right: spacer(2) !important;
+}
+
+.soft-double--bottom {
+  padding-bottom: spacer(2) !important;
+}
+
+.soft-double--left {
+  padding-left: spacer(2) !important;
+}
+
+.soft-double--ends {
+  padding-top: spacer(2) !important;
+  padding-bottom: spacer(2) !important;
+}
+
+.soft-double--sides {
+  padding-right: spacer(2) !important;
+  padding-left: spacer(2) !important;
+}
+
+.soft-triple {
+  padding: spacer(3) !important;
+}
+
+.soft-triple--top {
+  padding-top: spacer(3) !important;
+}
+
+.soft-triple--right {
+  padding-right: spacer(3) !important;
+}
+
+.soft-triple--bottom {
+  padding-bottom: spacer(3) !important;
+}
+
+.soft-triple--left {
+  padding-left: spacer(3) !important;
+}
+
+.soft-triple--ends {
+  padding-top: spacer(3) !important;
+  padding-bottom: spacer(3) !important;
+}
+
+.soft-triple--sides {
+  padding-right: spacer(3) !important;
+  padding-left: spacer(3) !important;
+}
+
+.soft-quad {
+  padding: spacer(4) !important;
+}
+
+.soft-quad--top {
+  padding-top: spacer(4) !important;
+}
+
+.soft-quad--right {
+  padding-right: spacer(4) !important;
+}
+
+.soft-quad--bottom {
+  padding-bottom: spacer(4) !important;
+}
+
+.soft-quad--left {
+  padding-left: spacer(4) !important;
+}
+
+.soft-quad--ends {
+  padding-top: spacer(4) !important;
+  padding-bottom: spacer(4) !important;
+}
+
+.soft-quad--sides {
+  padding-right: spacer(4) !important;
+  padding-left: spacer(4) !important;
+}
+
+// ## Zero Paddings
+
+//[c]
+//     <div class="hard--top">content</div>
+//[/c]
+
+.hard {
+  padding: 0 !important;
+}
+
+.hard--top {
+  padding-top: 0 !important;
+}
+
+.hard--right {
+  padding-right: 0 !important;
+}
+
+.hard--bottom {
+  padding-bottom: 0 !important;
+}
+
+.hard--left {
+  padding-left: 0 !important;
+}
+
+.hard--ends {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.hard--sides {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}

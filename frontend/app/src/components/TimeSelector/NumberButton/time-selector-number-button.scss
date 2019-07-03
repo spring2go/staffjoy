@@ -1,0 +1,25 @@
+@import "../../../../../resources/scss/staffjoy";
+
+.time-selector-number-button {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: solid 1px $staffjoy-palette-white;
+  font-family: $staffjoy-font;
+  font-weight: 600;
+  font-size: 13px;
+  background-color: inherit;
+  color: $dark-grey;
+
+  &:focus {
+    outline: none;
+    border-style: none;
+  }
+
+  &:hover, &:active, &.selected {
+    background-color: $outline-button;
+    border-color: $outline-button;
+    color: $pure-white;
+  }
+}

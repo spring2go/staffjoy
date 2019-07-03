@@ -1,0 +1,51 @@
+@import "../../../../resources/scss/colors";
+
+.is-small-screen .scheduling-container {
+  .scheduling-controls {
+    padding-left: 50px;
+
+    .control-unit-hidden-on-collapse {
+      display: none;
+    }
+  }
+}
+
+.scheduling-container {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: $staffjoy-palette-white;
+  z-index: 1;
+
+  .scheduling-controls {
+    height: 8%;
+    min-height: 60px;
+    max-height: 70px;
+    background-color: $staffjoy-palette-logo-grey;
+    width: 100%;
+    margin: 0;
+    padding-left: 20px;
+    z-index: 1;
+
+    .control-unit {
+      display: inline-block;
+      vertical-align: top;
+      margin: 13px 1% 0px;
+    }
+
+    .publish-week-btn {
+      float: right;
+      vertical-align: top;
+      display: inline-block;
+      margin: 13px 36px 0 12px;
+    }
+
+    .create-shift-btn {
+      float: right;
+      vertical-align: top;
+      display: inline-block;
+      margin: 13px 12px 0 0;
+    }
+  }
+}

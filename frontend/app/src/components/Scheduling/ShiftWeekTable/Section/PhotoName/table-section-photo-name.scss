@@ -1,0 +1,29 @@
+@import "../../../../../../../resources/scss/colors";
+
+.shift-row-photo-name {
+  padding-left: 35px;
+  padding-top: 25px;
+  display: flex;
+
+  .photo-column {
+    display: inline-block;
+
+    .profile-icon {
+      width: 35px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+  }
+
+  .name-column {
+    display: inline-block;
+    .row-name {
+      line-height: 1.2;
+      color: $dark-grey;
+      font-weight: 600;
+      font-size: 12px;
+      display: inline-block;
+      margin: 0;
+    }
+  }
+}

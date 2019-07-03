@@ -1,0 +1,162 @@
+@import "../../../../resources/scss/staffjoy.scss";
+
+.staffjoy-button {
+  cursor: pointer;
+  border-radius: 2px;
+  border-color: transparent;
+  text-transform: uppercase;
+  font-family: $staffjoy-font;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+
+  :hover {
+    cursor: pointer;
+  }
+
+  /* sizes */
+
+  &.large {
+    min-width: 320px;
+    height: 48px;
+  }
+
+  &.medium {
+    min-width: 160px;
+    height: 48px;
+  }
+
+  &.small {
+    min-width: 120px;
+    height: 32px;
+  }
+
+  &.tiny {
+    min-width: 80px;
+    height: 24px;
+    font-size: 12px;
+  }
+
+  /* color & shadow styling */
+
+  &.active, &:focus {
+    outline: none;
+  }
+
+  &.primary {
+    background-color: $staffjoy-palette-primary;
+    box-shadow: $button-shadow-standard;
+    color: $pure-white;
+
+    &:hover {
+      background-color: $primary-button-pressed-hover;
+    }
+
+    &:active, &.active {
+      background-color: $primary-button-pressed-hover;
+      box-shadow: $button-shadow-active;
+    }
+
+    &:disabled {
+      background-color: $primary-button-disabled;
+      box-shadow: $no-shadow;
+    }
+  }
+
+  &.accent {
+    background-color: $staffjoy-palette-accent;
+    box-shadow: $button-shadow-standard;
+    color: $pure-white;
+
+    &:hover {
+      background-color: $accent-button-pressed-hover;
+    }
+
+    &:active, &.active {
+      background-color: $accent-button-pressed-hover;
+      box-shadow: $button-shadow-active;
+    }
+
+    &:disabled {
+      background-color: $accent-button-disabled;
+      box-shadow: $no-shadow;
+    }
+  }
+
+  &.neutral {
+    background-color: $staffjoy-palette-white;
+    box-shadow: $button-shadow-standard;
+    color: $staffjoy-palette-logo-grey;
+
+    &:hover {
+      background-color: $neutral-button-pressed-hover;
+    }
+
+    &:active, &.active {
+      background-color: $neutral-button-pressed-hover;
+      box-shadow: $button-shadow-active;
+    }
+
+    &:disabled {
+      background-color: $neutral-button-disabled;
+      box-shadow: $no-shadow;
+      color: $accent-grey;
+    }
+  }
+
+  &.outline {
+    background-color: inherit;
+    border-color: $outline-button;
+    color: $outline-button;
+    border-style: solid;
+
+    &:hover {
+      background-color: $outline-button;
+      color: $pure-white;
+    }
+
+    &:active, &.active {
+      background-color: $outline-button-pressed;
+      border-color: $outline-button-pressed;
+      color: $pure-white;
+    }
+  }
+
+  &.outline-error {
+    background-color: inherit;
+    border-color: $staffjoy-status-error-standard;
+    color: $staffjoy-status-error-standard;
+    border-style: solid;
+
+    &:hover {
+      background-color: $staffjoy-status-error-light;
+      border-color: $staffjoy-status-error-light;
+      color: $pure-white;
+    }
+
+    &:active, &.active {
+      background-color: $staffjoy-status-error-standard;
+      border-color: $staffjoy-status-error-standard;
+      color: $pure-white;
+    }
+  }
+
+  &.outline-success {
+    background-color: inherit;
+    border-color: $staffjoy-status-success-standard;
+    color: $staffjoy-status-success-standard;
+    border-style: solid;
+
+    &:hover {
+      background-color: $staffjoy-status-success-light;
+      border-color: $staffjoy-status-success-light;
+      color: $pure-white;
+    }
+
+    &:active, &.active {
+      background-color: $staffjoy-status-success-standard;
+      border-color: $staffjoy-status-success-standard;
+      color: $pure-white;
+    }
+  }
+}

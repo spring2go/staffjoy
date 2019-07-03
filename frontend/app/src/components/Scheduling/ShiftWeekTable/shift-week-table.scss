@@ -1,0 +1,42 @@
+.shift-week-table {
+    width: 100%;
+    position: absolute;
+    height: 89%;
+    box-sizing: border-box;
+    padding-top: 12px;
+    z-index: -1;
+  
+    .scrolling-panel {
+      overflow-y: scroll;
+      box-sizing: border-box;
+      position: relative;
+  
+      /*
+        this height pairs with the % value in .shift-week-table-header
+        in the header scss file
+      */
+      height: 95%;
+    }
+  
+    .table-column {
+      width: 14%;
+      min-width: 137px;
+      display: inline-table;
+      whitespace: nowrap;
+      padding: 0 10px;
+      box-sizing: border-box;
+      flex: 1;
+  
+      &.col-2 { width: 50%; }
+      &.col-3 { width: 33%; }
+      &.col-4 { width: 25% }
+      &.col-5 { width: 20%; }
+      &.col-6 { width: 16%; }
+      &.col-7 { width: 14%; }
+  
+      &.centered {
+        text-align: center;
+      }
+    }
+  }
+  

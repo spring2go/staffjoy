@@ -1,0 +1,27 @@
+<div class="header" xmlns:th="http://www.thymeleaf.org">
+    <ul class="nav max-contained">
+        <li class="nav__item nav__logo">
+            <a th:href="@{/}" href="/"><img src="/assets/images/staffjoy-logos/logo-white.svg" alt="Staffjoy Logo"></a>
+        </li>
+        <li class="nav__item">
+            <a th:href="@{/}" href="/">Home</a>
+        </li>
+        <li class="nav__item">
+            <a th:href="@{/pricing}" href="pricing.html">Pricing</a>
+        </li>
+        <li class="nav__item">
+            <a href="mailto:help@staffjoy.xyz" id="intercom-launcher">Support</a>
+        </li>
+        <li class="nav__item">
+            <a th:href="@{/login}" href="login.html">
+                Log In
+            </a>
+        </li>
+        <li class="nav__item nav__item--desktop">
+            <a th:href="@{/sign-up}" href="sign-up.html" class="button button--outline">Sign Up</a>
+        </li>
+        <li class="nav__item nav__item--mobile">
+            <a th:href="@{/sign-up}" href="sign-up.html">Sign Up</a>
+        </li>
+    </ul>
+</div>

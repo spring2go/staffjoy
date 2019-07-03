@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>xyz.staffjoy</groupId>
+    <artifactId>staffjoy-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0</version>
+    <name>Staffjoy MicroServices Training Project</name>
+    <url>https://www.staffjoy.xyz</url>
+ 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <spring.boot.version>2.1.2.RELEASE</spring.boot.version>
+        <spring.cloud.version>Greenwich.RELEASE</spring.cloud.version>
+    </properties>
+ 
+    <modules>
+        <module>common-lib</module>
+        <module>account-svc</module>
+        <module>account-api</module>
+        <module>company-api</module>
+        <module>company-svc</module>
+        <module>mail-api</module>
+        <module>mail-svc</module>
+        <module>sms-svc</module>
+        <module>sms-api</module>
+        <module>bot-api</module>
+        <module>bot-svc</module>
+        <module>ical-svc</module>
+        <module>whoami-api</module>
+        <module>whoami-svc</module>
+        <module>web-app</module>
+        <module>faraday</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- Spring Boot -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- Spring Cloud -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring.cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- Swagger -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>2.9.2</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>2.9.2</version>
+            </dependency>
+
+            <!-- Structured logging -->
+            <dependency>
+                <groupId>structlog4j</groupId>
+                <artifactId>structlog4j-api</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+
+            <!-- Optional JSON formatter -->
+            <dependency>
+                <groupId>structlog4j</groupId>
+                <artifactId>structlog4j-json</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/io.sentry/sentry -->
+            <dependency>
+                <groupId>io.sentry</groupId>
+                <artifactId>sentry</artifactId>
+                <version>1.7.17</version>
+            </dependency>
+
+            <!-- Common -->
+            <dependency>
+                <groupId>xyz.staffjoy</groupId>
+                <artifactId>common-lib</artifactId>
+                <version>1.0.1</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+ 
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.vaadin.external.google</groupId>
+                    <artifactId>android-json</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}-${project.version}</finalName>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring.boot.version}</version>
+                    <configuration>
+                        <finalName>${project.build.finalName}</finalName>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>repackage</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>io.fabric8</groupId>
+                    <artifactId>docker-maven-plugin</artifactId>
+                    <version>0.26.1</version>
+                    <extensions>true</extensions>
+                    <configuration>
+                        <verbose>true</verbose>
+                        <images>
+                            <image>
+                                <name>${project.artifactId}</name>
+                                <build>
+                                    <from>java:8-jdk-alpine</from>
+                                    <entryPoint>
+                                        <exec>
+                                            <args>java</args>
+                                            <args>-jar</args>
+                                            <args>/maven/${project.build.finalName}.jar</args>
+                                        </exec>
+                                    </entryPoint>
+                                    <assembly>
+                                        <descriptorRef>artifact</descriptorRef>
+                                    </assembly>
+                                </build>
+                            </image>
+                        </images>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>build</id>
+                            <phase>post-integration-test</phase>
+                            <goals>
+                                <goal>build</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>UTF-8</encoding>
+                    <compilerArgs>
+                        <arg>-parameters</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>aliyun-repos</id>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <!--https://github.com/jacek99/structlog4j-->
+        <repository>
+            <id>jcenter</id>
+            <url>http://jcenter.bintray.com</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>aliyun-plugin</id>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+</project>

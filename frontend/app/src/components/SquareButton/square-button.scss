@@ -1,0 +1,11 @@
+@import "../../../../resources/scss/colors";
+
+.square-button {
+  border-radius: 2px !important;
+  background-color: $pure-white !important;
+  margin: 0 2px !important;
+
+  .material-icons {
+    color: $staffjoy-palette-logo-grey;
+  }
+}

@@ -1,0 +1,29 @@
+{
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "max-len": [1, 80, 2, {"ignoreComments": true}],
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/forbid-prop-types": "off",
+        "import/prefer-default-export": "off",
+        "jsx-a11y/no-static-element-interactions": "off"
+    },
+    "globals": {
+        "localStorage": true,
+        "document": true,
+        "String": true,
+        "window": true,
+        "fetch": true,
+        "confirm": true
+    },
+    "settings": {
+        "import/resolver": {
+            "webpack": {
+                "config": "webpack.config.js"
+            }
+        }
+    },
+}

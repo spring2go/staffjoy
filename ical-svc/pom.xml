@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<project
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+        xmlns="http://maven.apache.org/POM/4.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>xyz.staffjoy</groupId>
+        <artifactId>staffjoy-parent</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <artifactId>ical-svc</artifactId>
+    <name>Staffjoy-ICal-Svc</name>
+    <version>1.0.0</version>
+    <description>ICal project for Staffjoy microservices demo</description>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>xyz.staffjoy</groupId>
+            <artifactId>common-lib</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>xyz.staffjoy</groupId>
+            <artifactId>company-api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>docker</id>
+            <activation>
+                <property>
+                    <name>docker</name>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>io.fabric8</groupId>
+                        <artifactId>docker-maven-plugin</artifactId>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>

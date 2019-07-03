@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:with="http://www.thymeleaf.org/extras/with"
+      layout:decorate="~{layout}"
+      with:includeScripts="true"
+>
+<th:block layout:fragment="content">
+    <div class="login-panel">
+        <div class="back-button">
+            <a class="button button--outline white-bg" href="/"><i class="fa fa-arrow-left" aria-hidden="true"></i>Go Back</a>
+        </div>
+        <img th:src="|/assets/images/staffjoy-logos/logo.svg?version=${page.version}|" alt="Staffjoy Logo">
+        <h1>Create an online schedule that you can share with your team</h1>
+        <form th:action="@{/login}" class="login-form" th:method="post">
+            <div class="warning-message" th:if="${page.denied}">
+                Sorry, no account was found with that email and password. If you forgot your password, <a th:href="@{/password-reset}" href="reset.html">click here to reset it</a>.
+            </div>
+            <input type='hidden' name='return_to' th:value='${page.returnTo}'/>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label login-field">
+                <input class="mdl-textfield__input" type="text" id="login-email" name="email" th:value="${page.previousEmail}">
+                <label class="mdl-textfield__label" for="login-email">Email</label>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label login-field">
+                <input class="mdl-textfield__input" type="password" name="password" id="login-password">
+                <label class="mdl-textfield__label" for="login-password">Password</label>
+            </div>
+            <div class="remember-me-area login-field" for="remember-me-checkbox">
+                <input type="checkbox" id="remember-me-checkbox" class="mdl-checkbox__input" name="remember-me">
+                <span class="">Remember me</span>
+                <div class="password-reset">
+                    <a th:href="@{/password-reset}" href="reset.html">Reset Password</a>
+                </div>
+            </div>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+                Login
+            </button>
+        </form>
+
+        <p>Don't have an account? <a th:href="@{/sign-up}" href="signup.html">Create an Account</a></p>
+
+        <ul class="login-nav">
+            <li><a href="https://blog.staffjoy.com/">Blog</a></li>
+            <li><a th:href="@{/pricing}" href="pricing.html">Pricing</a></li>
+            <li><a href="mailto:help@staffjoy.xyz" id="intercom-launcher">Support</a></li>
+        </ul>
+    </div>
+</th:block>
+</html>

@@ -1,0 +1,63 @@
+/* general colors */
+$pure-black: #000;
+$pure-white: #fff;
+
+
+/* staffjoy brand colors */
+$staffjoy-palette-primary: #48B7AB;         // primary turquoise
+$staffjoy-palette-secondary: #CBDC57;       // light logo green
+$staffjoy-palette-accent: #744FC6;          // purple
+$staffjoy-palette-white: #F7F7F7;           // background color for logo
+$staffjoy-palette-logo-grey: #423A3F;       // dark grey on the logo
+
+
+/* status colors */
+// error
+$staffjoy-status-error-standard: #E51322;
+$staffjoy-status-error-medium: #FA626D;
+$staffjoy-status-error-light: #FC8790;
+
+// warning
+$staffjoy-status-warning-standard: #FDBC44;
+$staffjoy-status-warning-medium: #FFC964;
+$staffjoy-status-warning-light: #FFD689;
+
+// success
+$staffjoy-status-success-standard: #0C9284;
+$staffjoy-status-success-medium: #48B7AB;
+$staffjoy-status-success-light: #71D1C7;
+
+// neutral
+$staffjoy-status-neutral-standard: #9A9699;
+$staffjoy-status-neutral-medium: $staffjoy-palette-white;
+$staffjoy-status-neutral-light: $pure-white;
+
+/* greys */
+$dark-grey: #4a4a4a;
+$medium-grey: #878787;
+$light-grey: $staffjoy-palette-white;
+$accent-grey: #9a9699;
+
+
+/* other colors */
+$staffjoy-bg-light-active: rgba(72, 183, 171, 0.2);
+$staffjoy-bg-light-active-hover: rgba(72, 183, 171, 0.3);
+$staffjoy-logo-grey-alpha-10: rgba(66, 58, 63, 0.1);
+
+
+/* button colors */
+
+$primary-button: $staffjoy-palette-primary;
+$primary-button-pressed-hover: #40a499;
+$primary-button-disabled: #91d4cd;
+
+$accent-button: $staffjoy-palette-accent;
+$accent-button-pressed-hover: #6847b2;
+$accent-button-disabled: #ac95dd;
+
+$neutral-button: $staffjoy-palette-white;
+$neutral-button-pressed-hover: #dedede;
+$neutral-button-disabled: #fafafa;
+
+$outline-button: $accent-grey;
+$outline-button-pressed: #7b787a;

@@ -1,0 +1,84 @@
+#sign-up {
+  background: #48b7ab;
+  color: #fff;
+
+  @media (min-width: 1200px) {
+    background: url("/assets/images/staffjoy-logos/right-icon-bg.svg"), url("/assets/images/staffjoy-logos/left-icon-bg.svg"), #48b7ab;
+    background-repeat: no-repeat, no-repeat;
+    background-position: top right, bottom left;
+  }
+
+  .back-button {
+    margin-bottom: 7px;
+
+    i {
+      margin-right: 6px;
+    }
+  }
+
+  .main-area {
+    @media (min-width: 480px) {
+      padding-top: 80px;
+    }
+
+    text-align: center;
+
+    img {
+      min-width: 250px;
+      max-width: 350px;
+      width: 90%;
+      margin: 0 5% 20px;
+
+      @media (min-width: 480px) {
+        margin-bottom: 30px;
+      }
+    }
+
+    h1 {
+      font-size: 37px;
+      margin: 0 auto 25px;
+      max-width: 750px;
+
+      @media (min-width: 480px) {
+        margin-bottom: 50px;
+      }
+    }
+
+    .sign-up-form {
+      margin-bottom: 15px;
+
+      @media (min-width: 480px) {
+        margin-bottom: 50px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 16px;
+
+      a {
+        color: #fff;
+        text-decoration: underline;
+      }
+    }
+
+    .sign-up-nav {
+      margin-top: 30px;
+
+      @media (min-width: 480px) {
+        margin-top: 78px;
+      }
+
+      li {
+        display: inline;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0 8px 0;
+
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

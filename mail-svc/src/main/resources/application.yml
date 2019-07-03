@@ -1,0 +1,14 @@
+# application.yml
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: email-service
+
+staffjoy:
+  common:
+    sentry-dsn: ${SENTRY_DSN}
+    deploy-env: ${DEPLOY:V2}
+  aliyun-access-key: ${ALIYUN_ACCESS_KEY}
+  aliyun-access-secret: ${ALIYUN_ACCESS_SECRET}

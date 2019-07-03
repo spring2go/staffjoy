@@ -1,0 +1,2 @@
+logging:
+  config: /etc/staffjoy/logback-spring.xml

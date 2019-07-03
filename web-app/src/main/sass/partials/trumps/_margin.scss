@@ -1,0 +1,226 @@
+// # Margin Trumps
+
+// ## Add Margins
+// Push elements in any direction.
+
+//[c]
+//     <div class="push--top">content</div>
+//[/c]
+
+.push {
+  margin: spacer(1) !important;
+}
+
+.push--top {
+  margin-top: spacer(1) !important;
+}
+
+.push--right {
+  margin-right: spacer(1) !important;
+}
+
+.push--bottom {
+  margin-bottom: spacer(1) !important;
+}
+
+.push--left {
+  margin-left: spacer(1) !important;
+}
+
+.push--ends {
+  margin-top: spacer(1) !important;
+  margin-bottom: spacer(1) !important;
+}
+
+.push--sides {
+  margin-right: spacer(1) !important;
+  margin-left: spacer(1) !important;
+}
+
+.push-half {
+  margin: spacer(0.5) !important;
+}
+
+.push-half--top {
+  margin-top: spacer(0.5) !important;
+}
+
+.push-half--right {
+  margin-right: spacer(0.5) !important;
+}
+
+.push-half--bottom {
+  margin-bottom: spacer(0.5) !important;
+}
+
+.push-half--left {
+  margin-left: spacer(0.5) !important;
+}
+
+.push-half--ends {
+  margin-top: spacer(0.5) !important;
+  margin-bottom: spacer(0.5) !important;
+}
+
+.push-half--sides {
+  margin-right: spacer(0.5) !important;
+  margin-left: spacer(0.5) !important;
+}
+
+.push-double {
+  margin: spacer(2) !important;
+}
+
+.push-double--top {
+  margin-top: spacer(2) !important;
+}
+
+.push-double--right {
+  margin-right: spacer(2) !important;
+}
+
+.push-double--bottom {
+  margin-bottom: spacer(2) !important;
+}
+
+.push-double--left {
+  margin-left: spacer(2) !important;
+}
+
+.push-double--ends {
+  margin-top: spacer(2) !important;
+  margin-bottom: spacer(2) !important;
+}
+
+.push-double--sides {
+  margin-right: spacer(2) !important;
+  margin-left: spacer(2) !important;
+}
+
+.push-triple {
+  margin: spacer(3) !important;
+}
+
+.push-triple--top {
+  margin-top: spacer(3) !important;
+}
+
+.push-triple--right {
+  margin-right: spacer(3) !important;
+}
+
+.push-triple--bottom {
+  margin-bottom: spacer(3) !important;
+}
+
+.push-triple--left {
+  margin-left: spacer(3) !important;
+}
+
+.push-triple--ends {
+  margin-top: spacer(3) !important;
+  margin-bottom: spacer(3) !important;
+}
+
+.push-triple--sides {
+  margin-right: spacer(3) !important;
+  margin-left: spacer(3) !important;
+}
+
+.push-quad {
+  margin: spacer(4) !important;
+}
+
+.push-quad--top {
+  margin-top: spacer(4) !important;
+}
+
+.push-quad--right {
+  margin-right: spacer(4) !important;
+}
+
+.push-quad--bottom {
+  margin-bottom: spacer(4) !important;
+}
+
+.push-quad--left {
+  margin-left: spacer(4) !important;
+}
+
+.push-quad--ends {
+  margin-top: spacer(4) !important;
+  margin-bottom: spacer(4) !important;
+}
+
+.push-quad--sides {
+  margin-right: spacer(4) !important;
+  margin-left: spacer(4) !important;
+}
+
+// ## Zero Margins
+
+//[c]
+//     <div class="flush--top">content</div>
+//[/c]
+
+.flush {
+  margin: 0 !important;
+}
+
+.flush--top {
+  margin-top: 0 !important;
+}
+
+.flush--right {
+  margin-right: 0 !important;
+}
+
+.flush--bottom {
+  margin-bottom: 0 !important;
+}
+
+.flush--left {
+  margin-left: 0 !important;
+}
+
+.flush--ends {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.flush--sides {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+
+// ## Last Item Margin
+
+// Per [http://css-tricks.com/spacing-the-bottom-of-modules/](http://css-tricks.com/spacing-the-bottom-of-modules/)
+// this removes the margin from the last child that would otherwise create too much space
+// inside a element with bottom padding.
+
+// Given the following HTML the second paragraph would ordinarily have a default bottom margin.
+
+//[c]
+//     <div class="foo">
+//       <p>This is a paragraph with default bottom margin.</p>
+//       <p>This is a paragraph with a killed bottom margin.</p>
+//     </div>
+//[/c]
+
+// But with the `%kill-last-child-margin` extended to it that margin will go away.
+
+//[c]
+//     .foo {
+//       @extend %kill-last-child-margin;
+//     }
+//[/c]
+
+%kill-last-child-margin {
+  > *:last-child,
+  > *:last-child > *:last-child,
+  > *:last-child > *:last-child > *:last-child {
+    margin-bottom: 0;
+  }
+}

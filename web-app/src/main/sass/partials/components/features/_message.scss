@@ -1,0 +1,72 @@
+.feature--message {
+  
+  .feature__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: url(../images/homepage/phone.svg) no-repeat center top 50px;
+    
+    @include breakpoint($max: 800px) {
+      height: 300px;
+      background-position: center top 0;
+    }
+  }
+
+  .text-message {
+    min-height: 60px;
+    background: #cadc58;
+    width: 300px;
+    border-radius: 8px;
+    font-size: 20px;
+    line-height: 1.4;
+    padding: 15px 20px;
+    color: #fff;
+    position: relative;
+    margin: 15px 0;
+    right: 15px;
+    opacity: 0;
+    transform: translateY(40px);
+    
+    &:before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: 20px;
+      bottom: -20px;
+      border: 10px solid;
+      border-color: #cadc58 transparent transparent #cadc58;
+    }
+    
+    &--reverse {
+      background: #48b7ab;
+      left: 15px;
+      right: auto;
+      
+      &:before {
+        left: auto;
+        right: 20px;
+        border-color: #48b7ab #48b7ab transparent transparent;
+      }
+    }
+  }
+  
+  &.is-active {
+    .text-message {
+      opacity: 1;
+      transform: translateY(0);
+      transition: transform 1000ms, opacity 1000ms;
+    }
+    
+    .text-message--reverse {
+       transition-delay: 500ms;
+    }
+  }
+  
+  &.feature__item {
+    @include breakpoint($max: 800px) {
+      flex-direction: column-reverse;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@import "../../../../../../resources/scss/colors";
+@import "../../../../../../resources/scss/fonts";
+
+.employee-form-field {
+
+  .employee-form-field-label {
+    display: inline-block;
+    padding-right: 10px;
+  }
+
+  .employee-form-field-input {
+    border: 1px solid #FFF;
+    display: inline-block;
+    font-family: $staffjoy-font;
+    font-size: 12px;
+    padding: 3px;
+    vertical-align: top;
+  }
+
+  .employee-form-field-input:hover {
+    border: 1px solid #CCC;
+  }
+
+  .employee-form-field-success {
+    display: inline-block;
+    font-size: 10px;
+    vertical-align: top;
+
+    .material-icons {
+      color: $staffjoy-status-success-standard;
+      font-size: 14px;
+      padding-right: 5px;
+      vertical-align: middle;
+    }
+  }
+
+  .mdl-spinner {
+    height: 18px;
+    width: 18px;
+    vertical-align: top;
+
+   .mdl-spinner__circle {
+      border-width: 2px;
+    }
+  }
+}
+
+.employee-form-field-updating {
+
+  .employee-form-field-input:hover {
+    border: 1px solid #FFF;
+  }
+}
