@@ -2,34 +2,31 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: www-web-deployment
+  name: myaccount-spa-deployment
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: www-svc
-        env: test
+        app: myaccount-svc
+        env: prod
     spec:
       containers:
-        - name: www-svc
-          image: boboweike/www-svc
-          imagePullPolicy: Never
+        - name: myaccount-spa
+          image: boboweike/myaccount-spa
+#          imagePullPolicy: Never
           ports:
             - name: http-port
               containerPort: 80
-          envFrom:
-            - configMapRef:
-                name: common-config
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: www-service
+  name: myaccount-service
 spec:
   selector:
-    app: www-svc
-    env: test
+    app: myaccount-svc
+    env: prod
   ports:
     - protocol: TCP
       port: 80

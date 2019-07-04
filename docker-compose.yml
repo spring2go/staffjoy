@@ -3,7 +3,7 @@ version: '3.7'
 services:
   account-service:
     build: ./account-svc
-    image: account-svc
+    image: boboweike/account-svc
     environment:
       - SPRING_PROFILES_ACTIVE
       - SERVER_PORT
@@ -13,9 +13,9 @@ services:
       - COMPANY_SERVICE_ENDPOINT
       - BOT_SERVICE_ENDPOINT
       - INTERCOM_ACCESS_TOKEN
-      - DATASOURCE_URL=jdbc:mysql://host.docker.internal:3306/staffjoy_account?useUnicode=true&characterEncoding=utf-8
-      - DATASOURCE_USERNAME=root
-      - DATASOURCE_PASSWORD=root
+      - ACCOUNT_DATASOURCE_URL
+      - ACCOUNT_DATASOURCE_USERNAME
+      - ACCOUNT_DATASOURCE_PASSWORD
     depends_on:
       - bot-service
       - email-service
@@ -25,7 +25,7 @@ services:
 
   company-service:
     build: ./company-svc
-    image: company-svc
+    image: boboweike/company-svc
     environment:
       - SPRING_PROFILES_ACTIVE
       - SERVER_PORT
@@ -34,9 +34,9 @@ services:
       - EMAIL_SERVICE_ENDPOINT
       - ACCOUNT_SERVICE_ENDPOINT
       - BOT_SERVICE_ENDPOINT
-      - DATASOURCE_URL=jdbc:mysql://host.docker.internal:3306/staffjoy_company?useUnicode=true&characterEncoding=utf-8
-      - DATASOURCE_USERNAME=root
-      - DATASOURCE_PASSWORD=root
+      - COMPANY_DATASOURCE_URL
+      - COMPANY_DATASOURCE_USERNAME
+      - COMPANY_DATASOURCE_PASSWORD
     depends_on:
       - bot-service
       - email-service
@@ -46,7 +46,7 @@ services:
 
   bot-service:
     build: ./bot-svc
-    image: bot-svc
+    image: boboweike/bot-svc
     environment:
       - SPRING_PROFILES_ACTIVE
       - SERVER_PORT
@@ -63,7 +63,7 @@ services:
 
   email-service:
     build: ./mail-svc
-    image: mail-svc
+    image: boboweike/mail-svc
     environment:
       - SPRING_PROFILES_ACTIVE
       - SERVER_PORT
@@ -83,7 +83,7 @@ services:
 
   whoami-service:
     build: ./whoami-svc
-    image: whoami-svc
+    image: boboweike/whoami-svc
     environment:
       - SPRING_PROFILES_ACTIVE
       - SERVER_PORT
@@ -109,7 +109,7 @@ services:
 
   www-service:
     build: ./web-app
-    image: www-svc
+    image: boboweike/www-svc
     ports:
       - 81:80
     environment:
@@ -132,7 +132,7 @@ services:
 
   faraday-service:
     build: ./faraday
-    image: faraday-svc
+    image: boboweike/faraday-svc
     ports:
       - 80:80
     environment:
@@ -157,7 +157,7 @@ services:
     build:
       context: ./frontend
       dockerfile: myaccount/Dockerfile
-    image: myaccount-spa
+    image: boboweike/myaccount-spa
     networks:
       - internal_access
 
@@ -165,7 +165,7 @@ services:
     build:
       context: ./frontend
       dockerfile: app/Dockerfile
-    image: app-spa
+    image: boboweike/app-spa
     networks:
       - internal_access
 

@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: whoami-svc
-          image: whoami-svc
+          image: boboweike/whoami-svc
           imagePullPolicy: Never
           ports:
             - name: http-port

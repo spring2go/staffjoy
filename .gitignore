@@ -33,5 +33,6 @@ config/*.yml
 ### Docker Test Credentials ###
 .env
 
-### K8s Test Credentials
+### K8s Credentials
 k8s/test/config.yaml
+k8s/prod/config.yaml

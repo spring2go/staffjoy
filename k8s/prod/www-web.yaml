@@ -9,12 +9,12 @@ spec:
     metadata:
       labels:
         app: www-svc
-        env: test
+        env: prod
     spec:
       containers:
         - name: www-svc
           image: boboweike/www-svc
-          imagePullPolicy: Never
+#          imagePullPolicy: Never
           ports:
             - name: http-port
               containerPort: 80
@@ -29,7 +29,7 @@ metadata:
 spec:
   selector:
     app: www-svc
-    env: test
+    env: prod
   ports:
     - protocol: TCP
       port: 80

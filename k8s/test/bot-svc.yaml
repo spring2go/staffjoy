@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: bot-svc
-          image: bot-svc
+          image: boboweike/bot-svc
           imagePullPolicy: Never
           ports:
             - name: http-port

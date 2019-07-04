@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: company-svc
-          image: company-svc
+          image: boboweike/company-svc
           imagePullPolicy: Never
           ports:
             - name: http-port
@@ -21,13 +21,6 @@ spec:
           envFrom:
             - configMapRef:
                 name: common-config
-          env:
-            - name: DATASOURCE_URL
-              value: jdbc:mysql://mysql-svc/staffjoy_company?useUnicode=true&characterEncoding=utf-8
-            - name: DATASOURCE_USERNAME
-              value: root
-            - name: DATASOURCE_PASSWORD
-              value: root
 ---
 apiVersion: v1
 kind: Service

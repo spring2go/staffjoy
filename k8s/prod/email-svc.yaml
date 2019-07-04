@@ -2,19 +2,19 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: www-web-deployment
+  name: email-svc-deployment
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: www-svc
-        env: test
+        app: email-svc
+        env: prod
     spec:
       containers:
-        - name: www-svc
-          image: boboweike/www-svc
-          imagePullPolicy: Never
+        - name: mail-svc
+          image: boboweike/mail-svc
+#          imagePullPolicy: Never
           ports:
             - name: http-port
               containerPort: 80
@@ -25,11 +25,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: www-service
+  name: email-service
 spec:
   selector:
-    app: www-svc
-    env: test
+    app: email-svc
+    env: prod
   ports:
     - protocol: TCP
       port: 80

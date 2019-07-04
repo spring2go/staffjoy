@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: myaccount-spa
-          image: myaccount-spa
+          image: boboweike/myaccount-spa
           imagePullPolicy: Never
           ports:
             - name: http-port

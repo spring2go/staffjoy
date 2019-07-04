@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: mail-svc
-          image: mail-svc
+          image: boboweike/mail-svc
           imagePullPolicy: Never
           ports:
             - name: http-port
