@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: common-config
 data:
-  SPRING_PROFILES_ACTIVE: prod
+  SPRING_PROFILES_ACTIVE: uat
   SERVER_PORT: "80"
   EMAIL_SERVICE_ENDPOINT: http://email-service
   COMPANY_SERVICE_ENDPOINT: http://company-service

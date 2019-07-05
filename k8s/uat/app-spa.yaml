@@ -9,7 +9,7 @@ spec:
     metadata:
       labels:
         app: app-svc
-        env: prod
+        env: uat
     spec:
       containers:
         - name: app-spa
@@ -25,7 +25,7 @@ metadata:
 spec:
   selector:
     app: app-svc
-    env: prod
+    env: uat
   ports:
     - protocol: TCP
       port: 80

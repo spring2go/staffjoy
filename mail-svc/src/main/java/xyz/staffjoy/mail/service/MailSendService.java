@@ -42,7 +42,7 @@ public class MailSendService {
             };
         };
 
-        // In dev and uat - only send emails to @jskill.xyz
+        // In dev and uat - only send emails to @jskillcloud.com
         if (!EnvConstant.ENV_PROD.equals(envConfig.getName())) {
             // prepend env for sanity
             String subject = String.format("[%s] %s", envConfig.getName(), req.getSubject());

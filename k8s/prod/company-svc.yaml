@@ -14,13 +14,20 @@ spec:
       containers:
         - name: company-svc
           image: boboweike/company-svc
-#          imagePullPolicy: Never
           ports:
             - name: http-port
               containerPort: 80
           envFrom:
             - configMapRef:
                 name: common-config
+          volumeMounts:
+            - name: logback-config-volume
+              mountPath: /etc/staffjoy/logback-spring.xml
+              subPath: logback-spring.xml
+      volumes:
+        - name: logback-config-volume
+          configMap:
+            name: logback-config
 ---
 apiVersion: v1
 kind: Service

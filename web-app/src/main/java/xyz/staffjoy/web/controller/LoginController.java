@@ -103,7 +103,7 @@ public class LoginController {
                 helperService.syncUserAsync(account.getId());
 
                 String scheme  = "https";
-                if (EnvConstant.ENV_DEV.equals(envConfig.getName()) || EnvConstant.ENV_TEST.equals(envConfig.getName())) {
+                if (envConfig.isDebug()) {
                     scheme = "http";
                 }
 

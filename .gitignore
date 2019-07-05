@@ -36,3 +36,4 @@ config/*.yml
 ### K8s Credentials
 k8s/test/config.yaml
 k8s/prod/config.yaml
+k8s/uat/config.yaml

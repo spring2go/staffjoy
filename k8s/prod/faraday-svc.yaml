@@ -15,13 +15,20 @@ spec:
       containers:
         - name: faraday-svc
           image: boboweike/faraday-svc
-#          imagePullPolicy: Never
           ports:
             - name: http-port
               containerPort: 80
           envFrom:
             - configMapRef:
                 name: common-config
+          volumeMounts:
+            - name: logback-config-volume
+              mountPath: /etc/staffjoy/logback-spring.xml
+              subPath: logback-spring.xml
+      volumes:
+        - name: logback-config-volume
+          configMap:
+            name: logback-config
 ---
 apiVersion: v1
 kind: Service
@@ -34,5 +41,5 @@ spec:
   ports:
     - protocol: TCP
       port: 80
+      targetPort: 80
   type: LoadBalancer
-  loadBalancerIP: 104.198.99.93

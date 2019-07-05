@@ -2,18 +2,18 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: app-spa-deployment
+  name: myaccount-spa-deployment
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: app-svc
-        env: prod
+        app: myaccount-svc
+        env: uat
     spec:
       containers:
-        - name: app-spa
-          image: boboweike/app-spa
+        - name: myaccount-spa
+          image: boboweike/myaccount-spa
           ports:
             - name: http-port
               containerPort: 80
@@ -21,11 +21,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: app-service
+  name: myaccount-service
 spec:
   selector:
-    app: app-svc
-    env: prod
+    app: myaccount-svc
+    env: uat
   ports:
     - protocol: TCP
       port: 80

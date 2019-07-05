@@ -9,7 +9,7 @@ spec:
     metadata:
       labels:
         app: email-svc
-        env: prod
+        env: uat
     spec:
       containers:
         - name: mail-svc
@@ -36,7 +36,7 @@ metadata:
 spec:
   selector:
     app: email-svc
-    env: prod
+    env: uat
   ports:
     - protocol: TCP
       port: 80

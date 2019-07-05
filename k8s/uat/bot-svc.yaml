@@ -2,18 +2,18 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: email-svc-deployment
+  name: bot-svc-deployment
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: email-svc
-        env: prod
+        app: bot-svc
+        env: uat
     spec:
       containers:
-        - name: mail-svc
-          image: boboweike/mail-svc
+        - name: bot-svc
+          image: boboweike/bot-svc
           ports:
             - name: http-port
               containerPort: 80
@@ -32,11 +32,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: email-service
+  name: bot-service
 spec:
   selector:
-    app: email-svc
-    env: prod
+    app: bot-svc
+    env: uat
   ports:
     - protocol: TCP
       port: 80
