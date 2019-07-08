@@ -116,14 +116,15 @@ Spring Boot 与 Kubernetes 微服务实践 ～ 全面掌握云原生应用的架
 3. K8s有哪些基本概念？
 4. 深入理解Service和Service Discovery
 5. NodePort vs LoadBalancer vs Ingress
-6. 本地测试K8s环境搭建
-7. 本地测试K8s部署文件剖析
-8. 将Staffjoy部署到本地K8s环境
-9. K8s应用动态配置实验
-10. K8s应用动态扩容实验
-11. 生产环境K8s部署文件剖析
-12. 阿里云K8s环境创建
-13. 将Staffjoy部署到阿里云生产环境
+6. 深入理解K8s网络
+7. 本地测试K8s环境搭建
+8. 本地测试K8s部署文件剖析
+9. 将Staffjoy部署到本地K8s环境
+10. K8s应用动态配置实验
+11. K8s应用动态扩容实验
+12. 生产环境K8s部署文件剖析
+13. 阿里云K8s环境创建
+14. 将Staffjoy部署到阿里云生产环境
 
 ### 十、项目复盘、应用和扩展环节
 
