@@ -97,7 +97,7 @@ Spring Boot 与 Kubernetes 微服务实践 ～ 全面掌握云原生应用的架
 5. CAT vs Zipkin Vs Skywalking
 6. 结构化日志和审计日志
 7. 集中异常监控和Sentry
-8. ELK & Prometheus & Skywalking部署架构
+8. ELK & Prometheus & Skywalking + K8s部署架构
 
 ### 八、服务容器化和Docker Compose部署
 
