@@ -1,6 +1,8 @@
 # Staffjoy教学版
 微服务和云原生架构教学案例项目，基于Spring Boot和Kubernetes技术栈
 
+![宣传海报](doc/images/bobo_promote.jpg)
+
 ## 课程资料PPT
 1. 第一章 [课程介绍和案例需求](doc/ppts/Chapter_01.pdf)
 2. 第二章 [系统架构设计和技术栈选型](doc/ppts/Chapter_02.pdf)
