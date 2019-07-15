@@ -19,4 +19,15 @@
 3. [阿里巴巴全面启动中台战略](https://www.huxiu.com/article/133482/1.html)
 
 
+## Chaper_03
 
+1. [Shippable的微服务之旅：mono repo vs multiple repositories](http://blog.shippable.com/our-journey-to-microservices-and-a-mono-repository)
+2. [Why startups need to use monorepo](https://medium.com/@hoangbkit/why-monorepo-in-2018-89221acd4bfb)
+3. [Google Build System Bazel](https://bazel.build/)
+4. [Facebook Build System Buck](https://buck.build/)
+5. [Model Mapper](https://github.com/modelmapper/modelmapper)
+6. [gRPC](https://grpc.io/)
+7. [Thrift](https://github.com/apache/thrift)
+8. [Swagger Codegen](https://github.com/swagger-api/swagger-codegen)
+9. [Spring Boot2 Restful API Document with Swagger](https://dzone.com/articles/spring-boot-2-restful-api-documentation-with-swagg)
+10. [Swagger和Open API](https://swagger.io/docs/specification/about/)
