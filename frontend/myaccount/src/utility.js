@@ -46,8 +46,8 @@ export function routeToMicroservice(service, path = '') {
     case ENV_NAME_DEVELOPMENT:
       return devRoute;
 
-    case ENV_NAME_UAT:
-      return `${HTTPS_PREFIX}${service}${UAT_APEX}${path}`;
+    case ENV_NAME_UAT: // use http for demo
+      return `${HTTP_PREFIX}${service}${UAT_APEX}${path}`;
 
     case ENV_NAME_PRODUCTION:
       return `${HTTPS_PREFIX}${service}${PRODUCTION_APEX}${path}`;

@@ -123,8 +123,8 @@ export function routeToMicroservice(service, path = '', urlParams = {}) {
       fullPath = devRoute;
       break;
 
-    case ENV_NAME_UAT:
-      fullPath = `${HTTPS_PREFIX}${service}${UAT_APEX}${path}`;
+    case ENV_NAME_UAT: // use HTTP for demo
+      fullPath = `${HTTP_PREFIX}${service}${UAT_APEX}${path}`;
       break;
 
     case ENV_NAME_PRODUCTION:
