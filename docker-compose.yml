@@ -110,8 +110,6 @@ services:
   www-service:
     build: ./web-app
     image: boboweike/www-svc
-    ports:
-      - 81:80
     environment:
       - SPRING_PROFILES_ACTIVE
       - SERVER_PORT
@@ -128,7 +126,6 @@ services:
       - email-service
     networks:
       - internal_access
-      - external_access
 
   faraday-service:
     build: ./faraday
