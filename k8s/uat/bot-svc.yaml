@@ -22,8 +22,7 @@ spec:
                 name: common-config
           volumeMounts:
             - name: logback-config-volume
-              mountPath: /etc/staffjoy/logback-spring.xml
-              subPath: logback-spring.xml
+              mountPath: /etc/staffjoy
       volumes:
         - name: logback-config-volume
           configMap:

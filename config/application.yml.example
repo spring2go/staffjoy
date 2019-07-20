@@ -2,7 +2,7 @@
 # this file should and will not be checked into version control
 staffjoy:
   common:
-    sentry-dsn: YOUR-SENTRY-DSN
+    sentry-dsn: https://80bbf4ae778b525f9fe72e2813cd5246@sentry.io/1271087
   signing-secret: YOUR-SIGNING-SECRET
   intercom-access-token: YOUR-INTERCOM-ACCESS-TOKEN
   aliyun-access-key: YOUR-ALIYUN-ACCESS-KEY
