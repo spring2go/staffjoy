@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: www-svc
-          image: boboweike/www-svc:v1.3-blue
+          image: boboweike/www-svc:blue
           ports:
             - name: http-port
               containerPort: 80
