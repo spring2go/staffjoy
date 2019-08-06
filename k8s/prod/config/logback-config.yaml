@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: logback-config
+data:
+  logback-spring.xml: |
+    <?xml version="1.0" encoding="UTF-8"?>
+    <configuration scan="true" scanPeriod="30 seconds">
+        <appender name="ConsoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+            <withJansi>true</withJansi>
+            <encoder>
+                <pattern>%d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level) %logger{36}.%M - %msg%n</pattern>
+            </encoder>
+        </appender>
+
+        <root level="warn">
+            <appender-ref ref="ConsoleAppender" />
+        </root>
+        <logger name="xyz.staffjoy" additivity="false" level="info">
+            <appender-ref ref="ConsoleAppender" />
+        </logger>
+    </configuration>

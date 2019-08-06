@@ -1,0 +1,30 @@
+# https://matthewpalmer.net/kubernetes-app-developer/articles/kubernetes-apiversion-definition-guide.html
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: www-web-deployment-canary
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: www-svc
+        env: uat
+        track: canary
+    spec:
+      containers:
+        - name: www-svc
+          image: boboweike/www-svc:blue
+          ports:
+            - name: http-port
+              containerPort: 80
+          envFrom:
+            - configMapRef:
+                name: common-config
+          volumeMounts:
+            - name: logback-config-volume
+              mountPath: /etc/staffjoy
+      volumes:
+        - name: logback-config-volume
+          configMap:
+            name: logback-config

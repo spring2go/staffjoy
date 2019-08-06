@@ -9,8 +9,8 @@ import {
 
 // apex for the various staffjoy environments
 export const DEVELOPMENT_APEX = '.staffjoy-v2.local';
-export const UAT_APEX = '.staffjoy-uat.xyz';
-export const PRODUCTION_APEX = '.staffjoy.xyz';
+export const UAT_APEX = '.staffjoy-uat.local';
+export const PRODUCTION_APEX = '.staffjoy.com';
 
 // http prefixes
 export const HTTP_PREFIX = 'http://';
@@ -123,8 +123,8 @@ export function routeToMicroservice(service, path = '', urlParams = {}) {
       fullPath = devRoute;
       break;
 
-    case ENV_NAME_UAT:
-      fullPath = `${HTTPS_PREFIX}${service}${UAT_APEX}${path}`;
+    case ENV_NAME_UAT: // use HTTP for demo
+      fullPath = `${HTTP_PREFIX}${service}${UAT_APEX}${path}`;
       break;
 
     case ENV_NAME_PRODUCTION:

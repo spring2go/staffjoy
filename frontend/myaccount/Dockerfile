@@ -15,3 +15,4 @@ RUN ls /build/myaccount/dist
 FROM nginx
 EXPOSE 80
 COPY --from=builder /build/myaccount/dist /usr/share/nginx/html
+

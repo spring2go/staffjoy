@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: common-config
+data:
+  SPRING_PROFILES_ACTIVE: prod
+  SERVER_PORT: "80"
+  EMAIL_SERVICE_ENDPOINT: http://email-service
+  COMPANY_SERVICE_ENDPOINT: http://company-service
+  ACCOUNT_SERVICE_ENDPOINT: http://account-service
+  BOT_SERVICE_ENDPOINT: http://bot-service
+  SMS_SERVICE_ENDPOINT: http://sms-service
+  SENTRY_DSN: https://80aaf4ae889b414f9fe72e3904cd5246@sentry.io/1380198
+  SIGNING_SECRET: your_signing_secret
+  INTERCOM_ACCESS_TOKEN: YOUR_INTERCOM_ACCESS_TOKEN
+  INTERCOM_APP_ID: TBD
+  INTERCOM_SIGNING_SECRET: TBD
+  ALIYUN_ACCESS_KEY: YOUR_ALIYUN_ACCESS_KEY
+  ALIYUN_ACCESS_SECRET: YOUR_ALIYUN_ACCESS_SECRET
+  RECAPTCHA_PUBLIC: test-recaptcha-public
+  RECAPTCHA_PRIVATE: test-recaptcha-private
+  ACCOUNT_DATASOURCE_URL: jdbc:mysql://your_account.mysql.rds.aliyuncs.com:3306/staffjoy_account?useUnicode=true&characterEncoding=utf-8
+  ACCOUNT_DATASOURCE_USERNAME: root
+  ACCOUNT_DATASOURCE_PASSWORD: Root1234
+  COMPANY_DATASOURCE_URL: jdbc:mysql://your_company.mysql.rds.aliyuncs.com:3306/staffjoy_company?useUnicode=true&characterEncoding=utf-8
+  COMPANY_DATASOURCE_USERNAME: root
+  COMPANY_DATASOURCE_PASSWORD: Root1234
