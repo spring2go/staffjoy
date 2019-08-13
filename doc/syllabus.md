@@ -93,47 +93,47 @@ Spring Boot 与 Kubernetes 微服务实践 ～ 全面掌握云原生应用的架
 1. 何谓生产就绪(Production Ready)?
 2. SpringBoot如何实现分环境配置？
 3. Apollo vs Spring Cloud Config vs K8s ConfigMap
-4. 如何配置本地开发测试用机密数据？
-5. CAT vs Zipkin Vs Skywalking
-6. 结构化日志和审计日志
-7. 集中异常监控和Sentry
-8. ELK & Prometheus & Skywalking + K8s部署架构
+4. CAT vs Zipkin Vs Skywalking
+5. 结构化日志和审计日志
+6. 集中异常监控和Sentry
+7. ELK & Prometheus & Skywalking + K8s部署架构
 
 ### 八、服务容器化和Docker Compose部署
 
-1. 统一网关部署架构回顾
+1. 本地开发部署架构和需求
 2. 手工服务部署和测试
 3. Skywalking调用链监控实验
 4. Docker和Docker Compose简介
-5. 容器化和镜像构建～Account服务案例
-6. 容器化和镜像构建～MyAccount SPA应用案例
-7. Docker Compose服务部署文件剖析
-8. 将Staffjoy部署到本地Docker Compose环境
+5. 容器镜像构建Dockerfile解析
+6. Docker Compose服务部署文件剖析
+7. 将Staffjoy部署到本地Docker Compose环境
 
 ### 九、云原生架构和Kubernetes容器云部署
 1. 到底什么是云原生架构？
 2. K8s背景和架构
 3. K8s有哪些基本概念？
-4. 深入理解Service和Service Discovery
-5. NodePort vs LoadBalancer vs Ingress
-6. 深入理解K8s网络
-7. 本地测试K8s环境搭建
-8. 本地测试K8s部署文件剖析
-9. 将Staffjoy部署到本地K8s环境
-10. K8s应用动态配置实验
-11. K8s应用动态扩容实验
-12. 生产环境K8s部署文件剖析
-13. 阿里云K8s环境创建
-14. 将Staffjoy部署到阿里云生产环境
+4. 理解Kubernetes节点网络和Pod网络
+5. 深入理解Service网络和Service Discovery
+6. NodePort vs LoadBalancer vs Ingress
+7. 本地测试Kubernetes部署文件剖析
+8. 本地测试Kubernetes环境搭建
+9. 将Staffjoy部署到本地Kubernetes环境
+10. 生产环境Kubernetes部署文件剖析
+11. 阿里云Kubernetes环境创建
+12. 将Staffjoy部署到阿里云Kubernetes环境
+13. Kubernetes应用动态配置实验
+14. Kubernetes应用金丝雀发布实验
 
 ### 十、项目复盘、应用和扩展环节
+1. 项目复盘
+2. 项目扩展和应用
 
 ### 十一、附录：Staffjoy微服务实现简析
 
-* 1 Account服务
-* 2 Company服务
-* 3 Mail、SMS和Bot服务
-* 4 Faraday网关服务
-* 5 WhoAmI会话服务
-* 6 Landing Page Web应用
-* 7 MyAccount/MyCompany SPA应用
+1. Account服务
+2. Company服务
+3. Mail、SMS和Bot服务
+4. Faraday网关服务
+5. WhoAmI会话服务
+6. WWW服务
+7. MyAccount & App单页应用

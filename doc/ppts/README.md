@@ -6,3 +6,7 @@
 5. 第5章 [安全框架设计和实践](https://github.com/spring2go/staffjoy-ppt/blob/master/doc/ppts/Chapter_05.pdf)
 6. 第6章 [微服务测试设计和实践](https://github.com/spring2go/staffjoy-ppt/blob/master/doc/ppts/Chapter_06.pdf)
 7. 第7章 [可运维架构设计和实践](https://github.com/spring2go/staffjoy-ppt/blob/master/doc/ppts/Chapter_07.pdf)
+8. 第8章 [服务容器化和Docker Compose部署](https://github.com/spring2go/staffjoy-ppt/blob/master/doc/ppts/Chapter_08.pdf)
+9. 第9章 [云原生架构和Kubernetes容器云部署](https://github.com/spring2go/staffjoy-ppt/blob/master/doc/ppts/Chapter_09.pdf)
+10. 第10章 [项目复盘、扩展和应用](https://github.com/spring2go/staffjoy-ppt/blob/master/doc/ppts/Chapter_10.pdf)
+11. 第11章 [附录：Staffjoy微服务实现简析](https://github.com/spring2go/staffjoy-ppt/blob/master/doc/ppts/Chapter_11.pdf)
