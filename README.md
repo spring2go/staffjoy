@@ -11,11 +11,15 @@
 5. 第5章 [安全框架设计和实践](https://github.com/spring2go/staffjoy-ppt/blob/master/doc/ppts/Chapter_05.pdf)
 6. 第6章 [微服务测试设计和实践](https://github.com/spring2go/staffjoy-ppt/blob/master/doc/ppts/Chapter_06.pdf)
 7. 第7章 [可运维架构设计和实践](https://github.com/spring2go/staffjoy-ppt/blob/master/doc/ppts/Chapter_07.pdf)
+8. 第8章 [服务容器化和Docker Compose部署](https://github.com/spring2go/staffjoy-ppt/blob/master/doc/ppts/Chapter_08.pdf)
+9. 第9章 [云原生架构和Kubernetes容器云部署](https://github.com/spring2go/staffjoy-ppt/blob/master/doc/ppts/Chapter_09.pdf)
+10. 第10章 [项目复盘、扩展和应用](https://github.com/spring2go/staffjoy-ppt/blob/master/doc/ppts/Chapter_10.pdf)
+11. 第11章 [附录：Staffjoy微服务实现简析](https://github.com/spring2go/staffjoy-ppt/blob/master/doc/ppts/Chapter_11.pdf)
 4. 附：[课程参考资料链接](doc/reference.md)
 
 ## 项目初衷
 
-微服务和云原生架构是目前互联网行业的技术热点，相关资料文档很多，但是缺乏端到端的贴近生产的案例，这就使得很多互联网开发人员(包括架构师)，虽然学习了很多微服务理论，但是在真正落地实施微服务云原生架构的时候，仍然会感到困惑。为此，我利用业余时间，通过改造一个叫[Staffjoy](https://github.com/staffjoy/v2)的开源项目，开发了这个教学版的案例项目。整个项目采用微服务架构，并且可以一键部署到Kubernetes容器云环境。最近我和极客时间合作，基于这个案例项目开发了一门课程《Spring Boot 与 Kubernetes 微服务实践 ～ 全面掌握云原生应用的架构设计与实现》，参考[课程大纲](doc/syllabus.md)。希望通过实际案例项目和课程的学习，让开发人员/架构师不仅能够深入理解微服务和云原生架构原理，同时能够在生产实践中真正地去落地实施微服务和云原生架构。也希望这个项目成为微服务云原生架构的一个参考模版，进一步可以作为类似项目的脚手架。
+微服务和云原生架构是目前互联网行业的技术热点，相关资料文档很多，但是缺乏端到端的贴近生产的案例，这就使得很多互联网开发人员(包括架构师)，虽然学习了很多微服务理论，但是在真正落地实施微服务云原生架构的时候，仍然会感到困惑。为此，我利用业余时间，通过改造一个叫[Staffjoy](https://github.com/staffjoy/v2)的开源项目，开发了这个教学版的案例项目。整个项目采用微服务架构，并且可以一键部署到Kubernetes容器云环境。最近我和极客时间合作，基于这个案例项目开发了一门课程《Spring Boot 与 Kubernetes 云原生微服务实践 ～ 全面掌握云原生应用的架构设计与实现》，参考[课程大纲](doc/syllabus.md)。希望通过实际案例项目和课程的学习，让开发人员/架构师不仅能够深入理解微服务和云原生架构原理，同时能够在生产实践中真正地去落地实施微服务和云原生架构。也希望这个项目成为微服务云原生架构的一个参考模版，进一步可以作为类似项目的脚手架。
 
 ## 课程目标
 

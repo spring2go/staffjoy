@@ -73,3 +73,37 @@
 4. [structlog4j](https://github.com/jacek99/structlog4j)
 5. [Sentry.io](https://sentry.io)
 6. [Sentry Open Source](https://github.com/getsentry/sentry)
+
+## Chapter_08
+1. [SwitchHosts](https://github.com/oldj/SwitchHosts)
+2. [SkyWalking(6.1.0) Release](https://github.com/apache/skywalking/releases)
+3. [SkyWalking Java Agent Readme](https://github.com/apache/skywalking/blob/master/docs/en/setup/service-agent/java-agent/README.md)
+4. [MySQL(5.7.25) + Workbench download](https://dev.mysql.com/downloads/mysql/)
+5. [Docker 架构](https://docs.docker.com/engine/docker-overview/)
+6. [容器化Spring Boot应用](https://stackabuse.com/dockerizing-a-spring-boot-application/)
+7. [Docker Desktop for Mac install](https://docs.docker.com/docker-for-mac/install/)
+8. [Docker Desktop for Win install](https://docs.docker.com/docker-for-windows/install/)
+
+## Chapter_09
+1. [Designing Cloud Native Application with Kubernetes ppt](https://www.slideshare.net/bibryam/designing-cloud-native-applications-with-kubernetes)
+2. [cncf.io](https://cncf.io)
+3. [landscape.cncf.io](https://landscape.cncf.io)
+4. [Kubernetes发展历史](https://medium.com/containermind/a-new-era-of-container-cluster-management-with-kubernetes-cd0b804e1409)
+5. [cloud.google.com](https://cloud.google.com/containers/?hl=zh-cn)
+7. [Docker Desktop for Mac/Win阿里云定制版](https://github.com/AliyunContainerService/k8s-for-docker-desktop)
+8. [Minikube阿里云定制版](https://github.com/AliyunContainerService/minikube)
+9. [Kubernetes Dashboard安装](https://github.com/kubernetes/dashboard)
+10. [阿里云Kubernetes拓扑结构](https://yq.aliyun.com/articles/88526)
+
+## Chapter_10
+1. [Shopify ~ 商城 as a Service](https://www.shopify.com/)
+2. [Intercom ~ 客服 as a Service](https://www.intercom.com/)
+3. [Sentry ~ 日常日志 as a Service](https://sentry.io)
+4. [Launch Darkly ~ 开关中心 as a Service](https://launchdarkly.com/)
+
+## Chapter_11
+1. [ReactJS架构](https://developer.ibm.com/tutorials/wa-react-intro/)
+2. [Why Redux](https://blog.codecentric.de/en/2017/12/developing-modern-offline-apps-reactjs-redux-electron-part-3-reactjs-redux-basics/)
+3. [Redux架构](https://medium.com/mofed/react-redux-architecture-overview-7b3e52004b6e)
+4. [跟多Redux架构图](https://github.com/reduxjs/redux/issues/653)
+
