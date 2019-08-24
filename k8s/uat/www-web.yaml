@@ -10,6 +10,7 @@ spec:
       labels:
         app: www-svc
         env: uat
+        track: stable
     spec:
       containers:
         - name: www-svc

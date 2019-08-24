@@ -14,8 +14,8 @@ export const SENTRY_UAT_KEY = 'https://6d2bfa8c878d4905b2537647032f61c8@sentry.i
 export const HTTP_PREFIX = 'http://';
 export const HTTPS_PREFIX = 'https://';
 export const DEVELOPMENT_APEX = '.staffjoy-v2.local';
-export const UAT_APEX = '.staffjoy-uat.xyz';
-export const PRODUCTION_APEX = '.staffjoy.xyz';
+export const UAT_APEX = '.staffjoy-uat.local';
+export const PRODUCTION_APEX = '.staffjoy.com';
 
 const DEFAULT_REFETCH_INTERVAL = 10;
 

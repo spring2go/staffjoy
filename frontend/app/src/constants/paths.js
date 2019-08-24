@@ -9,8 +9,8 @@ import {
 
 // apex for the various staffjoy environments
 export const DEVELOPMENT_APEX = '.staffjoy-v2.local';
-export const UAT_APEX = '.staffjoy-uat.xyz';
-export const PRODUCTION_APEX = '.staffjoy.xyz';
+export const UAT_APEX = '.staffjoy-uat.local';
+export const PRODUCTION_APEX = '.staffjoy.com';
 
 // http prefixes
 export const HTTP_PREFIX = 'http://';
