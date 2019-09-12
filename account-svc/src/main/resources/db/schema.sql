@@ -9,8 +9,8 @@ CREATE TABLE IF NOT EXISTS account (
                                      photo_url VARCHAR(255) NOT NULL,
                                      support BOOLEAN NOT NULL DEFAULT false,
                                      PRIMARY KEY (id),
-                                     key ix_account_email (email),
-                                     key ix_account_phone_number (phone_number)
+                                     key ix_account_email (email), -- TODO use unique key
+                                     key ix_account_phone_number (phone_number) -- TODO use unique key
 ) ENGINE=InnoDB;
 
 -- time-zone issue reference
