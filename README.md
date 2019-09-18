@@ -72,7 +72,7 @@ Staffjoy 教学版所采用的技术栈都是目前行业主流，数量不多�
 ## 关于项目的进一步说明
 
 1. 教学版 Staffjoy 和原版 Staffjoy 在功能、设计和实现逻辑上基本保持一致，但教学版在原版基础上做了一些改造，以适应教学需要。首先，在开发语言框架上，原版 Staffjoy 用 Golang/Grpc 实现微服务，教学版 Staffjoy 则改造为用国内更主流的 Spring(Boot)实现微服务；其次，在架构上，原版 Staffjoy 因为使用 Grpc 开发微服务，为了将 Rpc 服务暴露成 HTTP/REST 服务，它多一个对应的 Grpc API Gateway 转换层服务，而教学版 Staffjoy 因为使用 Spring(Boot)开发，直接支持 HTTP/REST 接口，所以不需要独立转换层服务；第三，原版 Staffjoy 默认使用 SMS 短信发送排班通知信息，但在国内开通短信服务需要审批，比较麻烦，所以在教学版 Staffjoy 中，排班通知默认调整为邮件方式，方便测试和演示。学习理解了 Spring(Boot)教学版 Staffjoy，很容易理解原版 Golang/Grpc 开发的 Staffjoy，对原版有兴趣的学员可以直接看官方[源码](https://github.com/Staffjoy/v2)。
-2. 开发和运行教学版 Staffjoy，需要安装一些必要的开发工具(操作系统不限)，包括 JDK8，Maven 依赖管理工具，Intellij IDEA 或者 Eclipse STS IDE，MySQL 数据库和 MySQL Workbench 管理工具，Nodejs/npm 前端开发框架，Postman API 测试工具，以及 Docker 运行时环境。因为 Staffjoy 服务较多，如果要在本机跑，建议物理内存**不少于 16G**。
+2. 开发和运行教学版 Staffjoy，需要安装一些必要的开发工具(操作系统不限)，包括 JDK8，Maven 依赖管理工具，Intellij IDEA 或者 Eclipse STS IDE，MySQL 数据库和 MySQL Workbench 管理工具，Nodejs/npm 前端开发框架，Postman API 测试工具，以及 Docker 运行时环境。因为 Staffjoy 服务较多，如果要在本机跑，建议物理内存**不少于 8G**。
 3. 教学版的 Staffjoy 虽然是一个较完整的 SaaS 应用，并且架构设计中考虑了很多生产性环节，但是它仍然只是一个教学演示项目，仅供学习参考，如果你要将它进行生产化应用(或者基于它的代码做其它项目的脚手架)，则仍然需要对其进行严格测试和定制扩展。大家在学习或使用教学版 Staffjoy 过程中，如果发现有 bug，或者对项目有完善扩展建议，欢迎提交 github issue.
 
 ## 如何运行
@@ -81,7 +81,7 @@ Staffjoy 教学版所采用的技术栈都是目前行业主流，数量不多�
 
 Staffjoy 教学版依赖一些私密配置，例如 sentry-dsn 和 aliyun-access-key 等等，这些私密配置不能 checkin 到 github 上，所以采用了 Spring 的一种私密配置机制，私密数据集中配置在**config/application.yml**中，这个文件在 gitignore 中，不会被 checkin 到 github。请参考 config 目录中的[application.yml.example](config/application.yml.example)文件和格式，在 config 目录中添加一个**appliction.yml**文件，其中填写你自己的私密配置。如果你暂时没有这些配置，可以暂时用假数据，直接把 application.yml.example，改为 application.yml，这样应用可以运行起来。注意，如果 aliyun 相关配置不配，则无法发送邮件或短信，sentry 相关配置不配则无法发送异常数据到 sentry，intercom 不配则不能对接 intercom 客服系统，recaptcha 暂未用可以不配。
 
-TODO
+**关于如何运行的进一步内容，请参考极客时间的视频课程，课程里头有step by step演示**。
 
 ### 注意!!!
 
