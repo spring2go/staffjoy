@@ -65,7 +65,7 @@
     "boron": "^0.2.3",
     "classnames": "^2.2.5",
     "eslint-import-resolver-webpack": "^0.8.1",
-    "lodash": "^4.14.1",
+    "lodash": "^4.17.21",
     "moment": "^2.16.0",
     "moment-timezone": "^0.5.9",
     "normalizr": "^2.2.1",
