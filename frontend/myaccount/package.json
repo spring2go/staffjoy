@@ -61,7 +61,7 @@
     "awesome-phonenumber": "^1.0.14",
     "classnames": "^2.2.5",
     "lodash": "^4.14.1",
-    "moment": "^2.14.1",
+    "moment": "^2.29.2",
     "raven-js": "^3.7.0",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
