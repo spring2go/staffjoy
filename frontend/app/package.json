@@ -66,7 +66,7 @@
     "classnames": "^2.2.5",
     "eslint-import-resolver-webpack": "^0.8.1",
     "lodash": "^4.14.1",
-    "moment": "^2.16.0",
+    "moment": "^2.29.4",
     "moment-timezone": "^0.5.9",
     "normalizr": "^2.2.1",
     "npm-zepto": "^1.1.7",
